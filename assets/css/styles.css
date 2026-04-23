@@ -510,6 +510,10 @@ h3 {
   color: var(--text-muted);
 }
 
+.contact-button {
+  margin-top: 24px;
+}
+
 .signup {
   display: grid;
   grid-template-columns: 1fr auto;
