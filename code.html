@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monte Viejo | Café de Especialidad de Amazonas - Una Marca Familiar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .heritage-line {
+            height: 2px;
+            width: 120px;
+            display: flex;
+        }
+        .heritage-red { width: 25%; background-color: #ce001d; }
+        .heritage-white { width: 50%; background-color: #ffffff; }
+        
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#353534",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#e5e2e1",
+                    "outline-variant": "#4e4639",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#ce001d",
+                    "tertiary-container": "#a4a5a5",
+                    "error-container": "#93000a",
+                    "tertiary": "#c6c6c7",
+                    "on-secondary-container": "#ffdcd9",
+                    "on-secondary-fixed-variant": "#930011",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "surface-dim": "#131313",
+                    "outline": "#9a8f80",
+                    "primary-fixed-dim": "#e9c176",
+                    "on-tertiary": "#2f3131",
+                    "secondary-fixed": "#ffdad6",
+                    "primary-fixed": "#ffdea5",
+                    "on-secondary": "#680009",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary": "#ffb3ad",
+                    "on-primary-fixed": "#261900",
+                    "inverse-primary": "#775a19",
+                    "inverse-on-surface": "#313030",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#412d00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "background": "#131313",
+                    "primary-container": "#c5a059",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-secondary-fixed": "#410003",
+                    "primary": "#e9c176",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "on-primary-container": "#4e3700",
+                    "surface-tint": "#e9c176",
+                    "on-tertiary-container": "#393b3b",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#d1c5b4",
+                    "surface-container-highest": "#353534"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "label-sm": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-lg": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="bg-black/90 backdrop-blur-md text-amber-500 docked full-width top-0 z-50 border-b border-white/5">
+<nav class="flex justify-between items-center px-10 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Monte Viejo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujZhuTtfHt6fdOgS3EgRoSwhjtaj6MKH1ZyqL4YS5MUnoS2Rr1PYzvUL-4SXI74LDDUaXVHI8ZnjzjkOkcTsWmC45qClzGhQF7fb8dfk-ZUOB3wCQxHjN5UtMa-c-GQmnLc8qe3Ak3Kjn8ISvZauCTqLi0bxq0eXfWI6qYE01I9An5cQi87dYXPPDoTIFmFf_ouUj1uWCivwOpUJxwjudee-HxXKo466fuuKejfdSGW66VvtrWNDUu4lKnu9fL9NZM0PKJwbDAn"/>
+<div class="text-xl font-serif uppercase tracking-[0.1em] text-amber-500 hidden sm:block">
+                    Monte Viejo
+                </div>
+</div>
+<div class="hidden md:flex items-center space-gap gap-8 font-serif tracking-tight text-sm uppercase">
+<a class="text-zinc-400 hover:text-amber-200 transition-colors" href="#">Nuestra Familia</a>
+<a class="text-zinc-400 hover:text-amber-200 transition-colors" href="#">El Proceso</a>
+<a class="text-zinc-400 hover:text-amber-200 transition-colors" href="#">Colección</a>
+<a class="text-zinc-400 hover:text-amber-200 transition-colors" href="#">Preparación</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:text-amber-400 transition-all duration-300 scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Vistas aéreas de plantaciones de café en Amazonas" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxos607pN26e-LD9_NM1ClIUeV9SIwBKT_jOkl2Iz_OZMlFRzJ7DXNeCAIaEFpVqmYQr9C07uegsB55qGSb3ozgH8grJLPR9HQQo4tMnAMuJmu1VmHRvKs802zadltuPmuaB6DdApDOE5jJXeQQnPj7HqmmbCAvS9M8lCvdtZZkoZnP-StJjXSO9705fiKnEZMu1w-bkq85-ydAk5KZ_VcEIaoTZVdXvF_s-qjCO338zpERC2YxSljwPWduu14GzL-uXPHefo05_Y"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+<div class="animate-float mb-8">
+<img alt="Grano de café premium Monte Viejo" class="mx-auto w-48 h-48 object-contain drop-shadow-[0_0_30px_rgba(233,193,118,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQgWAZmq_TgaDyzNjWr0dPA8VRAwysywjMZ0_fnmC-WWnx_G2Xrn5xrkS1MyB-wAXonN3r0iZnBHqpeqArkJSEPjRLT-Lh18YCSeU0frhhoAnutXrf80OzNIe7S-wvPBg3bco6sh9qfTbZufTts22npe7tJlfx7Sj9vq0F7mKeUnrxhgaka42q_LYTjs6u9RCEhPDrSdY3I4Iddzlv-a0v6k0IZP942CQEVA4Vn9X-_id8XXRIolds9KA9Hh2ljPO77fEwSnHnn0"/>
+</div>
+<div class="heritage-line mx-auto mb-8">
+<div class="heritage-red"></div>
+<div class="heritage-white"></div>
+<div class="heritage-red"></div>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary mb-4 drop-shadow-lg">Nacido entre las Nubes</h1>
+<p class="font-label-sm text-primary uppercase tracking-[0.4em] mb-6">Una Marca Familiar</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10 [text-shadow:_0_1px_4px_rgba(0,0,0,0.8)]">
+                    Descubre la profundidad inigualable del café de especialidad cultivado en las mumas de gran altitud del Amazonas peruano por la Familia Becerril.
+                </p>
+<button class="px-12 py-4 border border-primary text-primary font-label-sm uppercase tracking-widest hover:bg-primary hover:text-black transition-all duration-500">
+                    Explora la Cosecha
+                </button>
+</div>
+</section>
+<!-- Familia Becerril Section -->
+<section class="py-32 px-10 max-w-[1920px] mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="heritage-line">
+<div class="heritage-red"></div>
+<div class="heritage-white"></div>
+<div class="heritage-red"></div>
+</div>
+<span class="material-symbols-outlined text-primary/40 text-sm" data-icon="groups">groups</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">La Familia Becerril</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        En el corazón de Amazonas, Monte Viejo representa más que un café; es el legado de una marca familiar dedicada a la excellence. 
+                    </p>
+<p class="font-body-lg text-body-lg text-primary/90 font-medium">
+                        El café es cosechado, lavado, secado y tostado de manera artesanal por la familia Becerril, asegurando que cada grano conserve la pureza de nuestra tierra.
+                    </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<img alt="Cosecha de café" class="w-full h-64 object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/ADBb0uiCHUBZrNx-lC3_9OOkQylWurrPkhGiQ943eDNzIqBdWMK46ECBkr7BeZBGYsRRGhGrKf8ROONvoPL6ibx5ef5gfwblEZwdS1_zfLub_eqjXBFet41Lxa95TDjfOteWFV2Gvdih-30bRqZvB1y6TwY7WwbL-5wPPMg-0A5QZ1tLdYjs2C9QqL5g5oPC6tGzb6ZPDimpLjfTapcSPUeUYU4_lWA6kfd5vBhJVwGk8f5Abga51e1csAkeKULmLIXqVHzopAw1AFBazw"/>
+<img alt="Cerezas de café frescas" class="w-full h-64 object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/ADBb0uh_HkMj7q-3_74yob0ObJecmVxKCZEOprn_J8zSVrzDthmR1oS_gbvm8H2JsoAjrvm-tYtaFPAvgqF1JEIxGEwBow7O88vJchniQLrhtxcoWgHk7GiGRNyjjymHAebEYdUMh4lC_olC_UIxaMCBLKEUcS1JMRH13rOSQe45JB4-u9ultDPQJFXPnEAMDK2OY7B3MwUl4MvljEsZSj9MKo628_p31OuNfND-3uKwD9q2QSTZU4JQRSoBXw0zurFRTc2iMeJ3r6yF9w"/>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full opacity-50"></div>
+<img alt="Presentación Premium Monte Viejo" class="relative z-10 w-full h-[700px] object-cover border border-outline-variant/30 shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0ujvhwXDcP6mYSH1TlWGv0pbFyYhN_gyJkRfBagx5W0I7zpRWa6gD2TBDcGwU9Y_HhbxCd_ZTfP2SSy6YJGewVY-5JishfrveOkhN-bpSsg76Jz1JAjah6hj1O0KU94U3eSnPG5-eal5ItjJYZp63aCdXx6Xs939W3zDlFWmJi72Wf7PoqEbkN8f3rhfcQj2Fw4aRNXJlMLqoICxSPwaTEcvGq1lTIwNw325_391WPlJyNHKEBEru9pNKySsXXF2xPSFHqUDAHdESQ"/>
+<div class="absolute bottom-8 left-8 z-20 bg-black/80 backdrop-blur-md p-6 border-l-4 border-primary">
+<p class="font-serif italic text-lg text-white">"Nuestra familia cuida cada detalle, desde el primer brote hasta su taza."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Collection (Products) -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="px-10 max-w-[1920px] mx-auto text-center mb-20">
+<div class="flex justify-center items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="coffee_bean">coffee_bean</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Nuestra Colección Familiar</h2>
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="coffee_bean">coffee_bean</span>
+</div>
+<p class="font-label-sm text-label-sm text-zinc-500 uppercase tracking-[0.3em]">Micro-lotes Limitados de Origen Único</p>
+</div>
+<div class="px-10 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product Card 1 -->
+<div class="bg-[#141414] border border-[#2A2A2A] p-8 flex flex-col items-center group">
+<div class="relative w-full aspect-[4/5] mb-8 overflow-hidden bg-gradient-to-b from-transparent to-primary/5">
+<img alt="Amazonas Gold Roast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ug0b7wBOsCuoS5xoh_SbsRKhoCgTLYh600MXaFWvzJqkumG0Wn9Zulc-rYYIQrc7vwdRh910XjZqIRNUsb8BfV3kIYf1oRnsmNBNR0sMh1UpnAzQEK1iBxWKzI62MVxGQh4N0QFqmAGM7FK-_6e_3hOo5oh0J8CvvmAPMQmVPsS1rSYIuVHYJHHdpG514areaJEeHMb41NFQrOtFMi2gJQjquHLKHL-XfElSjbaCpbuU20YZ2AzjnSlz0pdjbM_-Gv3PNDdtWXYWw"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Amazonas Gold</h3>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Chocolate</span>
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Miel</span>
+</div>
+<p class="font-display-xl text-xl text-primary">$42.00</p>
+</div>
+<!-- Product Card 2 (Featured) -->
+<div class="bg-[#141414] border border-primary/30 p-8 flex flex-col items-center group relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 radial-gradient pointer-events-none"></div>
+<div class="relative w-full aspect-[4/5] mb-8 overflow-hidden bg-gradient-to-b from-transparent to-primary/10">
+<img alt="Monte Viejo Selección" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ugGoZA0tk_Cv3bYCpMPMgH35sQrVlByCmcDvXh0ckA4cn43ibmS5BJD7KCkq40b3aArQxwgyWn-GVSNg2fqOxthuVgFrgGIFz0eBKszHFxMk5ZhMQqj6yPmZyuUwIdbZc1ifqbZCOB9vmtirG3a3lKiDhZg89X13-Uai5vrPLWBAZ2UySPy0nUY0-xegG1yToozH4W5kaLhhxyVep0zNPFzMadPrymjI4qquxAk6DLtx3QSLN7894fFk0x7t2NoOXTXlMAhy7CRBQ"/>
+</div>
+<span class="absolute top-4 right-4 bg-primary text-black font-label-sm px-4 py-1 text-[10px]">RECOMENDACIÓN FAMILIAR</span>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Cloud Forest</h3>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Cacao</span>
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Mandarina</span>
+</div>
+<p class="font-display-xl text-xl text-primary">$48.00</p>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-[#141414] border border-[#2A2A2A] p-8 flex flex-col items-center group">
+<div class="relative w-full aspect-[4/5] mb-8 overflow-hidden bg-gradient-to-b from-transparent to-primary/5">
+<img alt="Sacred Valley Light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uhtxThwKJc9f72uHFwYcn58Gz2uO5XQB60GxfsDN-bPu4aOsPG7sUQjt6SeEEW1TgO0B4enNf5phV4a0QCUYJ3yF89m4Etkb3fgMbs0TuuhZ3chtzpOTVJo1WHKuqvCzoa9NFxp_sH0iQd9JO_XgDyPIoZI35l_XnVN9OvR5QtmwdwtB4Ne2w37JehF88TCVvv4ODkRXkI6MIr6ZnyTeXU2vSR3yoVr-ljSDkp9uHzJnt_1YDDYRb4DBM9OKwg4PGadF6f984qS"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface mb-2">Sacred Valley</h3>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Cítrico</span>
+<span class="px-3 py-1 bg-surface-variant rounded-xl font-label-sm text-[10px] text-white">Floral</span>
+</div>
+<p class="font-display-xl text-xl text-primary">$38.00</p>
+</div>
+</div>
+</section>
+<!-- Brewing Rituals -->
+<section class="py-32 px-10 max-w-[1920px] mx-auto">
+<div class="mb-16">
+<div class="flex items-center gap-4 mb-6">
+<div class="heritage-line">
+<div class="heritage-red"></div>
+<div class="heritage-white"></div>
+<div class="heritage-red"></div>
+</div>
+<span class="material-symbols-outlined text-primary/40 text-xl" data-icon="coffee">coffee</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Rituales de Preparación</h2>
+<p class="font-body-md text-on-surface-variant mt-4">Honramos la dedicación de la familia Becerril mediante métodos que resaltan la pureza del grano.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-auto">
+<div class="relative h-[500px] overflow-hidden border border-outline-variant/20 group">
+<img alt="Ritual V60" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhtxThwKJc9f72uHFwYcn58Gz2uO5XQB60GxfsDN-bPu4aOsPG7sUQjt6SeEEW1TgO0B4enNf5phV4a0QCUYJ3yF89m4Etkb3fgMbs0TuuhZ3chtzpOTVJo1WHKuqvCzoa9NFxp_sH0iQd9JO_XgDyPIoZI35l_XnVN9OvR5QtmwdwtB4Ne2w37JehF88TCVvv4ODkRXkI6MIr6ZnyTeXU2vSR3yoVr-ljSDkp9uHzJnt_1YDDYRb4DBM9OKwg4PGadF6f984qS"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col justify-end p-8">
+<span class="font-label-sm text-primary mb-2">MÉTODO 01</span>
+<h4 class="font-headline-md text-white">Vertido Artesanal</h4>
+</div>
+</div>
+<div class="relative h-[500px] overflow-hidden border border-outline-variant/20 group">
+<img alt="Granos Monte Viejo" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ujvhwXDcP6mYSH1TlWGv0pbFyYhN_gyJkRfBagx5W0I7zpRWa6gD2TBDcGwU9Y_HhbxCd_ZTfP2SSy6YJGewVY-5JishfrveOkhN-bpSsg76Jz1JAjah6hj1O0KU94U3eSnPG5-eal5ItjJYZp63aCdXx6Xs939W3zDlFWmJi72Wf7PoqEbkN8f3rhfcQj2Fw4aRNXJlMLqoICxSPwaTEcvGq1lTIwNw325_391WPlJyNHKEBEru9pNKySsXXF2xPSFHqUDAHdESQ"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col justify-end p-8">
+<span class="font-label-sm text-primary mb-2">MÉTODO 02</span>
+<h4 class="font-headline-md text-white">Inmersión Pura</h4>
+</div>
+</div>
+<div class="relative h-[500px] overflow-hidden border border-outline-variant/20 group">
+<img alt="Selección de Origen" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ugGoZA0tk_Cv3bYCpMPMgH35sQrVlByCmcDvXh0ckA4cn43ibmS5BJD7KCkq40b3aArQxwgyWn-GVSNg2fqOxthuVgFrgGIFz0eBKszHFxMk5ZhMQqj6yPmZyuUwIdbZc1ifqbZCOB9vmtirG3a3lKiDhZg89X13-Uai5vrPLWBAZ2UySPy0nUY0-xegG1yToozH4W5kaLhhxyVep0zNPFzMadPrymjI4qquxAk6DLtx3QSLN7894fFk0x7t2NoOXTXlMAhy7CRBQ"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex flex-col justify-end p-8">
+<span class="font-label-sm text-primary mb-2">MÉTODO 03</span>
+<h4 class="font-headline-md text-white">La Alquimia del Tueste</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Invitation -->
+<section class="py-32 bg-surface-container-low text-center">
+<div class="max-w-2xl mx-auto px-6">
+<div class="flex justify-center mb-6">
+<span class="material-symbols-outlined text-primary/40 text-2xl" data-icon="stars">stars</span>
+</div>
+<h2 class="font-headline-lg text-primary mb-6">Únete al Círculo Familiar</h2>
+<p class="font-body-md text-on-surface-variant mb-10">Sé el primero en recibir noticias sobre las cosechas de la familia Becerril y lanzamientos de micro-lotes exclusivos.</p>
+<form class="flex flex-col md:flex-row gap-4 items-end">
+<div class="flex-grow w-full text-left">
+<label class="font-label-sm text-primary uppercase text-[10px] mb-2 block">Tu Correo Electrónico</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-primary text-on-surface focus:ring-0 focus:border-amber-300 transition-colors py-3 px-0" type="email"/>
+</div>
+<button class="w-full md:w-auto px-10 py-3 border border-primary text-primary font-label-sm uppercase tracking-widest hover:bg-primary hover:text-black transition-all">
+                        Suscribirse
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0A0A] full-width relative pt-16 pb-8">
+<div class="flex flex-col items-center gap-8 px-10 w-full max-w-[1920px] mx-auto">
+<img alt="Monte Viejo" class="h-16 w-auto opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0ujkUg4q5gPsbPrZilZNA56PLdC_Vv-MUJeDUz7F_PN77Hhn26bqDXNx8fH_Qnx9rHWYHu8QOOrU2eBGUXidI2YgwAFtDGj3Ka25PT3A-d_4qCPEBWfk1Y3CLRBpd5WdaKayUs-uTpxo0MFmdynUu8UHhW9g9KrVZ86QFlDY-WyXlhpTFRPbo-y9Pjmzv_FC8OYqtAiWTSaHYyPmPHF2vhRIA2ZvnrlegkNGnrYhkATEdG-wVCuMA_9nH23DEccqOOjeFtQ_5ZhDPQ"/>
+<div class="text-xs font-serif text-amber-500 uppercase tracking-[0.3em] mb-4">
+                Una Marca Familiar • Amazonas, Perú
+            </div>
+<div class="flex flex-wrap justify-center gap-10 font-serif text-sm tracking-wide text-zinc-500">
+<a class="hover:text-amber-500 underline-offset-4 hover:underline transition-all duration-500 ease-out" href="#">Ética</a>
+<a class="hover:text-amber-500 underline-offset-4 hover:underline transition-all duration-500 ease-out" href="#">Familia</a>
+<a class="hover:text-amber-500 underline-offset-4 hover:underline transition-all duration-500 ease-out" href="#">Sostenibilidad</a>
+<a class="hover:text-amber-500 underline-offset-4 hover:underline transition-all duration-500 ease-out" href="#">Contacto</a>
+</div>
+<div class="heritage-line">
+<div class="heritage-red"></div>
+<div class="heritage-white"></div>
+<div class="heritage-red"></div>
+</div>
+<p class="font-serif text-sm tracking-wide text-zinc-600 text-center">
+                © 2024 Monte Viejo. Café artesanal por la familia Becerril desde el corazón del Amazonas.
+            </p>
+</div>
+</footer>
+</body></html>
