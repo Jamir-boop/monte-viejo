@@ -1,7 +1,7 @@
 window.siteContent = {
   site: {
     title: "Monte Viejo | Café de especialidad",
-    description: "Monte Viejo, café de especialidad de Rodríguez de Mendoza, Amazonas. Café familiar de altura, origen trazable y producción responsable.",
+    description: "Monte Viejo, café de especialidad de Rodríguez de Mendoza, Amazonas. Café de altura, origen trazable y producción responsable.",
     brandName: "Monte Viejo",
     logo: "assets/images/logo-black-main.png",
     logoAlt: "Monte Viejo",
@@ -9,6 +9,7 @@ window.siteContent = {
   },
 
   navigation: [
+    
     { label: "Historia", href: "#familia" },
     { label: "Catálogo", href: "#coleccion" },
     { label: "Misión", href: "#mision" },
