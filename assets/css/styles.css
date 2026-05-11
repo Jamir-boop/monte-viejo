@@ -134,7 +134,7 @@ input {
   z-index: -2;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(19, 19, 19, 0.26) 42%, #131313 100%),
-    url("../images/hero-amazonas.jpg") center / cover no-repeat;
+    var(--hero-background, url("../images/hero-amazonas.jpg")) center / cover no-repeat;
 }
 
 .hero::after {
