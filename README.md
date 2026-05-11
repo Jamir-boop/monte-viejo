@@ -18,4 +18,20 @@ See `CLIENT_GUIDE.md`.
 
 Use repository root as Pages source.
 
-https://jamir-boop.github.io/monte-viejo/	
+https://jamir-boop.github.io/monte-viejo/
+
+## Custom domain
+
+This repo includes `CNAME` for:
+
+monteviejo.org
+
+DNS records for Cloudflare:
+
+```text
+A     @    185.199.108.153
+A     @    185.199.109.153
+A     @    185.199.110.153
+A     @    185.199.111.153
+CNAME www  jamir-boop.github.io
+```
