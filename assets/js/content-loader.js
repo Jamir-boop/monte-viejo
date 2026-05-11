@@ -62,6 +62,48 @@
     }
   };
 
+  const syncExclusiveCtas = () => {
+    const navCta = document.querySelector(".nav-cta");
+    const heroCta = document.querySelector(".hero .button");
+
+    if (!navCta || !heroCta) {
+      return;
+    }
+
+    const setNavCtaHidden = (hidden) => {
+      navCta.classList.toggle("is-hidden", hidden);
+
+      if (hidden) {
+        navCta.setAttribute("aria-hidden", "true");
+        navCta.setAttribute("tabindex", "-1");
+        return;
+      }
+
+      navCta.removeAttribute("aria-hidden");
+      navCta.removeAttribute("tabindex");
+    };
+
+    const isHeroCtaVisible = () => {
+      const rect = heroCta.getBoundingClientRect();
+      return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+    };
+
+    setNavCtaHidden(isHeroCtaVisible());
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        setNavCtaHidden(entries.some((entry) => entry.isIntersecting));
+      });
+
+      observer.observe(heroCta);
+      return;
+    }
+
+    const update = () => setNavCtaHidden(isHeroCtaVisible());
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+  };
+
   const createElement = (tag, className, value) => {
     const element = document.createElement(tag);
     if (className) {
@@ -223,6 +265,7 @@
   text(".hero-copy", hero.text);
   setLink(".hero .button", hero.buttonText, whatsappUrl(hero.whatsappText));
   setLink(".nav-cta", "WhatsApp", whatsappUrl());
+  syncExclusiveCtas();
 
   text("#familia .section-kicker .eyebrow", story.kicker);
   text("#familia h2", story.title);
