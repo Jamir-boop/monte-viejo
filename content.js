@@ -21,7 +21,7 @@ window.siteContent = {
     text: "Café de especialidad cultivado por una familia productora de segunda generación, a más de 1600 m s. n. m., con origen trazable y calidad real.",
     buttonText: "Pedir por WhatsApp",
     whatsappText: "Hola, quiero hacer un pedido de café Monte Viejo.",
-    beanImage: "assets/images/Gemini_Generated_Image_cwb818cwb818cwb8.png",
+    beanImage: "assets/images/coffee-bean.png",
     beanAlt: "Grano de café Monte Viejo",
     backgroundImage: "assets/images/hero-amazonas.jpg"
   },
