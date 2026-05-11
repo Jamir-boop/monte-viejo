@@ -19,7 +19,7 @@ window.siteContent = {
   hero: {
     eyebrow: "Café de altura · Rodríguez de Mendoza, Amazonas",
     title: "Monte Viejo",
-    text: "Café de especialidad cultivado por una familia productora de segunda generación, a más de 1600 m s. n. m., con origen trazable y calidad real.",
+    text: "Café de especialidad cultivado con pasión y armonía con el medio ambiente, a más de 1600 m s. n. m., con origen trazable y calidad real.",
     buttonText: "Pedir por WhatsApp",
     whatsappText: "Hola, quiero hacer un pedido de café Monte Viejo.",
     beanImage: "assets/images/coffee-bean.png",
@@ -32,7 +32,7 @@ window.siteContent = {
     title: "Nuestra historia nace en las montañas",
     image: "assets/images/family-sq.png",
     imageAlt: "Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza",
-    caption: "Café de altura, tradición familiar y dedicación por la calidad. Desde Amazonas hasta tu taza.",
+    caption: "Café de altura, tradición familiar y dedicación por la calidad",
     blocks: [
       {
         title: "Nuestra historia",
