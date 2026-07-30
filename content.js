@@ -1,7 +1,7 @@
 window.siteContent = {
   site: {
     title: "Monte Viejo | Café de especialidad",
-    description: "Monte Viejo, café de especialidad de Rodríguez de Mendoza, Amazonas. Café de altura, origen trazable y producción responsable.",
+    description: "Café de especialidad de Rodríguez de Mendoza, Amazonas. Café verde, tostado y molido, con prácticas que cuidan el entorno.",
     brandName: "Monte Viejo",
     logo: "assets/images/logo-black-main.png",
     logoAlt: "Monte Viejo",
@@ -12,14 +12,14 @@ window.siteContent = {
     
     { label: "Historia", href: "#familia" },
     { label: "Catálogo", href: "#coleccion" },
-    { label: "Misión", href: "#mision" },
+    { label: "Cómo trabajamos", href: "#mision" },
     { label: "Contacto", href: "#contacto" }
   ],
 
   hero: {
-    eyebrow: "Café de altura · Rodríguez de Mendoza, Amazonas",
+    eyebrow: "Rodríguez de Mendoza, Amazonas · Más de 1600 m s. n. m.",
     title: "Monte Viejo",
-    text: "Café de especialidad cultivado con pasión y armonía con el medio ambiente, a más de 1600 m s. n. m., con origen trazable y calidad real.",
+    text: "Un café de especialidad para todos los días.",
     buttonText: "Pedir por WhatsApp",
     whatsappText: "Hola, quiero hacer un pedido de café Monte Viejo.",
     beanImage: "assets/images/coffee-bean.png",
@@ -28,51 +28,51 @@ window.siteContent = {
   },
 
   story: {
-    kicker: "Historia / Quiénes somos",
-    title: "Nuestra historia nace en las montañas",
+    kicker: "Quiénes somos",
+    title: "Somos una familia cafetera de Rodríguez de Mendoza",
     image: "assets/images/family-sq.png",
     imageAlt: "Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza",
     caption: "Café de altura, tradición familiar y dedicación por la calidad",
     blocks: [
       {
-        title: "Nuestra historia",
+        title: "Dos generaciones trabajando con café",
         paragraphs: [
-          "Somos una empresa cafetera familiar nacida en las montañas de Rodríguez de Mendoza, Amazonas, una zona privilegiada por su clima, biodiversidad y suelos fértiles.",
-          "Somos segunda generación dedicada a la producción de café. Para nosotros, el café no es solo un producto: es tradición familiar y forma de vida."
+          "Somos una familia de las montañas de Rodríguez de Mendoza, Amazonas. Aquí, el clima, la biodiversidad y los suelos permiten cultivar café de altura.",
+          "Llevamos dos generaciones produciendo café. Este trabajo forma parte de nuestra vida diaria y de la historia de la familia."
         ]
       },
       {
-        title: "Café de altura, origen y calidad",
+        title: "Cómo cuidamos cada lote",
         paragraphs: [
-          "Nuestro café se cultiva por encima de los 1600 m s. n. m., lo que permite obtener granos de mayor densidad y perfiles de taza más complejos.",
-          "Desde la selección del grano en campo hasta el control de calidad posterior, buscamos que cada lote conserve lo mejor de su origen."
+          "Nuestro café crece por encima de los 1600 m s. n. m. A esa altitud, los granos desarrollan mayor densidad y perfiles de taza más complejos.",
+          "Seleccionamos el grano en el campo y revisamos su calidad después del proceso para que cada lote conserve las características de su origen."
         ]
       },
       {
-        title: "Compromiso con el medio ambiente",
+        title: "Cuidar el lugar donde cultivamos",
         paragraphs: [
-          "Trabajamos en armonía con el entorno, aplicando prácticas responsables que protegen la biodiversidad y sostienen el cultivo.",
-          "Cuidamos el suelo, el agua y los recursos que hacen posible nuestro café."
+          "Usamos prácticas que protegen la biodiversidad y ayudan a sostener el cultivo.",
+          "También cuidamos el suelo, el agua y los demás recursos que hacen posible nuestro café."
         ]
       },
       {
-        title: "Nuestra esencia",
+        title: "Café de Rodríguez de Mendoza",
         paragraphs: [
-          "Nos mueve el orgullo de mostrar al Perú y al mundo el potencial de Rodríguez de Mendoza con un producto auténtico, trazable y de especialidad.",
-          "Cada bolsa representa esfuerzo familiar, trabajo de campo y valor de nuestra tierra."
+          "Queremos que más personas en el Perú y otros países conozcan el café de nuestra zona: un café trazable y de especialidad.",
+          "Cada bolsa sale del trabajo de campo de nuestra familia y de la tierra que cultivamos."
         ]
       }
     ]
   },
 
   catalog: {
-    eyebrow: "Monte Viejo · Café de especialidad",
-    title: "Catálogo de productos",
-    intro: "Ofrecemos café verde, tostado en grano y molido para tostadores, negocios y consumidores que buscan calidad real.",
+    eyebrow: "Café verde, tostado y molido",
+    title: "Nuestros cafés",
+    intro: "Vendemos café verde, tostado en grano y molido. Atendemos a tostadores, cafeterías, otros negocios y personas que preparan café en casa.",
     origin: {
-      eyebrow: "Información de origen",
-      title: "Rodríguez de Mendoza - Amazonas",
-      text: "Café 100% arábica, cultivado en variedades Catimor y Típica, procesado bajo método lavado para una taza limpia, balanceada y dulce.",
+      eyebrow: "De dónde viene",
+      title: "Rodríguez de Mendoza, Amazonas",
+      text: "Nuestro café es 100% arábica, de variedades Catimor y Típica. Usamos el proceso lavado para obtener una taza limpia, balanceada y dulce.",
       specs: [
         { label: "Altitud", value: "+1600 m s. n. m." },
         { label: "Proceso", value: "Lavado" },
@@ -83,54 +83,54 @@ window.siteContent = {
     products: [
       {
         title: "Café verde",
-        image: "assets/images/bag-forest.jpg",
-        imageAlt: "Café verde Monte Viejo",
-        text: "Seleccionado para tostadores, cafeterías y negocios que buscan origen definido, trazabilidad y consistencia.",
+        image: "assets/images/cafe-verde-studio.webp",
+        imageAlt: "Saco abierto con granos de café verde sin tostar",
+        text: "Seleccionamos café verde para tostadores y cafeterías que necesitan un origen identificado y lotes consistentes.",
         specs: [
-          "Sacos o por mayor según requerimiento",
-          "Perfil: cacao, miel, frutos secos",
-          "Venta según volumen y campaña"
+          "Disponible en sacos y compras por mayor",
+          "Perfil de taza: cacao, miel y frutos secos",
+          "Disponibilidad según volumen y campaña"
         ],
         cta: "Consultar por WhatsApp",
         whatsappText: "Hola, quiero consultar por Café verde Monte Viejo."
       },
       {
         title: "Café tostado en grano",
-        badge: "Recomendado",
+        badge: "Para todos los días",
         featured: true,
-        image: "assets/images/bag-table.jpg",
-        imageAlt: "Café tostado en grano Monte Viejo",
-        text: "Perfil balanceado para consumo diario y cafeterías. Resalta dulzor natural, aroma y taza limpia.",
+        image: "assets/images/cafe-tostado-grano-con-bolsa.webp",
+        imageAlt: "Bolsa Monte Viejo detrás de un recipiente con café tostado en grano",
+        text: "Es un tueste balanceado para tomar todos los días o servir en cafetería. Tiene dulzor natural, buen aroma y una taza limpia.",
         specs: [
-          "Presentaciones: 500 g / 1 kg",
-          "Notas: caramelo, cacao, panela y nuez",
-          "Ideal para espresso, moka, prensa y filtrados"
+          "Bolsas de 500 g y 1 kg",
+          "Notas de caramelo, cacao, panela y nuez",
+          "Para espresso, moka, prensa y métodos filtrados"
         ],
         cta: "Consultar por WhatsApp",
         whatsappText: "Hola, quiero consultar por Café tostado en grano Monte Viejo."
       },
       {
         title: "Café molido",
-        image: "assets/images/pour-over.jpg",
-        imageAlt: "Café molido Monte Viejo",
-        text: "Tostado y empacado para conservar frescura y aroma, pensado para practicidad sin perder calidad.",
+        image: "assets/images/cafe-molido-con-bolsa.webp",
+        imageAlt: "Bolsa Monte Viejo detrás de una cuchara con café molido",
+        text: "Lo tostamos, molemos y empacamos para conservar su aroma. Puedes elegir la molienda según cómo prepares tu café.",
         specs: [
           "Molienda fina, media o gruesa",
-          "Presentaciones: 500 g / 1 kg",
-          "Para cafetera eléctrica, moka, prensa y filtrado"
+          "Bolsas de 500 g y 1 kg",
+          "Para cafetera eléctrica, moka, prensa y métodos filtrados"
         ],
         cta: "Consultar por WhatsApp",
         whatsappText: "Hola, quiero consultar por Café molido Monte Viejo."
       },
       {
         title: "Venta al por mayor",
-        image: "assets/images/coffee-cherries.jpg",
-        imageAlt: "Café para negocios Monte Viejo",
-        text: "Abastecimiento para cafeterías, restaurantes, tiendas, tostadores y distribuidores.",
+        image: "assets/images/venta-mayorista-studio.webp",
+        imageAlt: "Sacos de café para venta al por mayor",
+        text: "Preparamos pedidos para cafeterías, restaurantes, tiendas, tostadores y distribuidores.",
         specs: [
           "Café verde, tostado o molido",
           "Entregas programadas",
-          "Precio segun cantidad y frecuencia"
+          "Precio según cantidad y frecuencia"
         ],
         cta: "Consultar por WhatsApp",
         whatsappText: "Hola, quiero consultar por Venta al por mayor Monte Viejo."
@@ -139,37 +139,37 @@ window.siteContent = {
   },
 
   mission: {
-    kicker: "Misión / Visión",
-    title: "Tradición familiar, calidad real",
-    text: "Monte Viejo conecta trabajo de campo, origen trazable y café de especialidad para consumidores y negocios que valoran calidad constante.",
+    kicker: "Cómo trabajamos",
+    title: "Del cafetal a cada pedido",
+    text: "Cultivamos el café y revisamos el origen de cada lote antes de preparar un pedido. Vendemos a personas y negocios que buscan una calidad constante.",
     cards: [
       {
-        eyebrow: "Mision",
-        title: "Compartir el verdadero sabor del café de altura",
-        text: "Cultivamos café de Rodríguez de Mendoza con pasión y respeto por la naturaleza, ofreciendo un producto auténtico y de calidad."
+        eyebrow: "En la finca",
+        title: "Café de altura de Rodríguez de Mendoza",
+        text: "Cultivamos café con respeto por el entorno y cuidamos su calidad desde la finca hasta cada pedido."
       },
       {
-        eyebrow: "Vision",
-        title: "Ser puente entre Rodríguez de Mendoza y el mundo",
-        text: "Queremos llevar nuestra tradición familiar a cada taza y mostrar el potencial del café amazónico."
+        eyebrow: "A dónde queremos llegar",
+        title: "Llevar nuestro café a más lugares",
+        text: "Queremos vender café de Amazonas en más lugares y seguir trabajando en familia como lo hacemos hoy."
       },
       {
-        eyebrow: "Negocios",
-        title: "Café para cafeterías, restaurantes y tiendas",
+        eyebrow: "Para negocios",
+        title: "Pedidos para cafeterías, restaurantes y tiendas",
         text: "Atendemos compras por mayor, entregas programadas y requerimientos de café verde, tostado o molido."
       }
     ]
   },
 
   contact: {
-    title: "Hablemos de tu próximo pedido",
-    text: "Consulta disponibilidad de café verde, tostado, molido o compras por mayor para negocios y distribuidores.",
+    title: "Cuéntanos qué café necesitas",
+    text: "Escríbenos para consultar disponibilidad de café verde, tostado o molido. También atendemos pedidos por mayor.",
     buttonText: "Cotizar por WhatsApp",
     whatsappText: "Hola, quiero cotizar café Monte Viejo."
   },
 
   footer: {
-    eyebrow: "Una marca familiar · Rodríguez de Mendoza, Amazonas",
+    eyebrow: "Familia cafetera · Rodríguez de Mendoza, Amazonas",
     copyright: "2026 Monte Viejo. Café de especialidad desde Rodríguez de Mendoza, Amazonas."
   }
 };

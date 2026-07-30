@@ -176,6 +176,43 @@
     });
   };
 
+  const initPackageSlider = () => {
+    const slider = document.querySelector(".package-slider");
+    const count = slider?.querySelector(".package-slider-count");
+    const slides = slider ? Array.from(slider.querySelectorAll(".package-slider-frame > img")) : [];
+
+    if (slides.length < 2) {
+      return;
+    }
+
+    slides.forEach((slide) => {
+      slide.loading = "eager";
+    });
+
+    let current = 0;
+    const show = (index) => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        slide.hidden = slideIndex !== current;
+      });
+      if (count) {
+        count.textContent = `${current + 1} / ${slides.length}`;
+      }
+    };
+
+    show(0);
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    window.setInterval(() => {
+      if (!document.hidden && !slider.matches(":hover, :focus-within")) {
+        show(current + 1);
+      }
+    }, 4000);
+  };
+
   const renderProducts = () => {
     const products = content.catalog?.products;
     const container = document.querySelector(".product-grid");
@@ -280,6 +317,7 @@
   text(".origin-panel h3", origin.title);
   text(".origin-panel p:not(.eyebrow)", origin.text);
   renderOriginSpecs();
+  initPackageSlider();
   renderProducts();
 
   text("#mision .section-kicker .eyebrow", mission.kicker);
