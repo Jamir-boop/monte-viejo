@@ -2,16 +2,24 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Café de especialidad de Rodríguez de Mendoza, Amazonas. Café verde, tostado y molido, con prácticas que cuidan el entorno.">
     <title>Monte Viejo | Café de especialidad de Amazonas</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo-black-main.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <!--
+      THESIS: Everyday coffee from one real Amazonas family; refuse anonymous dark luxury.
+      OWN-WORLD: Coffee-cherry red fields, white relief, swept display lettering, soft image windows, and one blossom mark.
+      STORY: See the bag and farm, verify the origin, choose a coffee, and order through WhatsApp.
+      FIRST VIEWPORT: Red offer at left, panoramic farm at right, oversized bag across the seam, CTA above the fold, origin proof below.
+      FORM: Cereza total / Farm Window, chosen challenger, seed 8299120e.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
     <header class="site-header">
       <nav class="nav" aria-label="Principal">
         <a class="brand" href="#inicio" aria-label="Monte Viejo inicio">
@@ -19,259 +27,177 @@
           <span>Monte Viejo</span>
         </a>
         <div class="nav-links">
-          <a href="#familia">Historia</a>
-          <a href="#coleccion">Catálogo</a>
-          <a href="#mision">Misión</a>
+          <a href="#cafes">Nuestros cafés</a>
+          <a href="#familia">Familia</a>
+          <a href="#origen">Origen</a>
           <a href="#contacto">Contacto</a>
         </div>
-        <a class="nav-cta" href="https://api.whatsapp.com/send?phone=51993908403" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="nav-cta" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20caf%C3%A9%20Monte%20Viejo." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.64.95.97-3.55-.23-.36A9.57 9.57 0 0 1 2.4 11.9a9.64 9.64 0 0 1 9.63-9.62c2.57 0 4.98 1 6.8 2.82a9.56 9.56 0 0 1 2.82 6.81 9.64 9.64 0 0 1-9.61 9.59m8.19-17.8A11.5 11.5 0 0 0 12.03.3C5.66.3.48 5.48.48 11.86c0 2.04.53 4.03 1.55 5.78L.38 23.7l6.2-1.63a11.55 11.55 0 0 0 5.45 1.39h.01c6.37 0 11.55-5.18 11.55-11.56 0-3.09-1.2-6-3.36-8.19"></path></svg>
+          <span>Pedir café</span>
+        </a>
       </nav>
     </header>
 
     <main id="inicio">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <img class="hero-bean" src="assets/images/coffee-bean.png" alt="Grano de café Monte Viejo">
-          <div class="heritage-line center" aria-hidden="true">
-            <span></span><span></span><span></span>
+          <div class="hero-message">
+            <div class="hero-title-line">
+              <h1 id="hero-title">Monte Viejo</h1>
+              <svg class="hero-bloom" viewBox="0 0 100 100" aria-hidden="true">
+                <g fill="currentColor" transform="translate(50 50)">
+                  <ellipse rx="8" ry="27" transform="rotate(0) translate(0 -27)"></ellipse>
+                  <ellipse rx="8" ry="27" transform="rotate(60) translate(0 -27)"></ellipse>
+                  <ellipse rx="8" ry="27" transform="rotate(120) translate(0 -27)"></ellipse>
+                  <ellipse rx="8" ry="27" transform="rotate(180) translate(0 -27)"></ellipse>
+                  <ellipse rx="8" ry="27" transform="rotate(240) translate(0 -27)"></ellipse>
+                  <ellipse rx="8" ry="27" transform="rotate(300) translate(0 -27)"></ellipse>
+                  <circle r="7"></circle>
+                </g>
+              </svg>
+            </div>
+            <p class="hero-copy">Un café de especialidad para todos los días.</p>
+            <a class="button hero-button" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20caf%C3%A9%20Monte%20Viejo." target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
-          <p class="eyebrow">Rodríguez de Mendoza, Amazonas · Más de 1600 m s. n. m.</p>
-          <h1 id="hero-title">Monte Viejo</h1>
-          <p class="hero-copy">
-            Un café de especialidad para todos los días.
-          </p>
-          <a class="button" href="https://api.whatsapp.com/send?phone=51993908403" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+
+          <div class="hero-visual">
+            <div class="hero-landscape">
+              <img class="hero-landscape-image" src="assets/images/hero-amazonas.jpg" alt="Cafetales entre montañas y neblina en Rodríguez de Mendoza, Amazonas">
+            </div>
+            <img class="hero-bag" src="assets/images/bolsa-monte-viejo-frente.webp" alt="Bolsa de café Monte Viejo de 500 g">
+          </div>
+        </div>
+
+        <dl class="hero-proof" aria-label="Datos de origen">
+          <div><dt>Origen</dt><dd>Rodríguez de Mendoza, Amazonas</dd></div>
+          <div><dt>Altitud</dt><dd>+1600 m s. n. m.</dd></div>
+          <div><dt>Proceso</dt><dd>Lavado</dd></div>
+          <div><dt>Puntaje estimado</dt><dd>83 SCA</dd></div>
+        </dl>
+      </section>
+
+      <section class="section catalog-section" id="cafes" aria-labelledby="catalog-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="catalog-title">Nuestros cafés</h2>
+            <p class="section-intro">Vendemos café verde, tostado en grano y molido. Atendemos a tostadores, cafeterías, otros negocios y personas que preparan café en casa.</p>
+          </div>
+
+          <div class="product-grid">
+            <a class="product-card featured" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20Caf%C3%A9%20tostado%20en%20grano%20Monte%20Viejo." target="_blank" rel="noopener">
+              <span class="badge">Para todos los días</span>
+              <img src="assets/images/catalogo-tostado-horizontal.webp" alt="Bolsa Monte Viejo detrás de un recipiente con café tostado en grano">
+              <div class="product-content">
+                <h3>Café tostado en grano</h3>
+                <span class="product-cta">Pedir por WhatsApp</span>
+                <p class="product-copy">Un tueste balanceado, con dulzor natural, buen aroma y una taza limpia.</p>
+                <ul class="product-specs"><li>Bolsas de 500 g y 1 kg</li><li>Caramelo, cacao, panela y nuez</li><li>Para espresso, moka, prensa y filtrados</li></ul>
+              </div>
+            </a>
+
+            <a class="product-card ground" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20Caf%C3%A9%20molido%20Monte%20Viejo." target="_blank" rel="noopener">
+              <img src="assets/images/catalogo-molido-horizontal.webp" alt="Bolsa Monte Viejo detrás de una cuchara con café molido">
+              <div class="product-content"><h3>Café molido</h3><span class="product-cta">Pedir por WhatsApp</span><p class="product-copy">Molienda fina, media o gruesa según cómo prepares tu café.</p><ul class="product-specs"><li>Bolsas de 500 g y 1 kg</li><li>Empacado para conservar aroma</li><li>Para cafetera, moka, prensa y filtrado</li></ul></div>
+            </a>
+
+            <details class="business-products">
+              <summary>¿Compras para tu negocio? <span>Ver café verde y pedidos por mayor</span></summary>
+              <div class="business-grid">
+                <a class="product-card green" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Caf%C3%A9%20verde%20Monte%20Viejo." target="_blank" rel="noopener">
+                  <img src="assets/images/catalogo-verde-horizontal.webp" alt="Saco abierto con granos de café verde sin tostar">
+                  <div class="product-content"><h3>Café verde</h3><span class="product-cta">Consultar por WhatsApp</span><p class="product-copy">Origen identificado y lotes consistentes para tostadores y cafeterías.</p><ul class="product-specs"><li>Disponible en sacos y por mayor</li><li>Perfil de cacao, miel y frutos secos</li><li>Según volumen y campaña</li></ul></div>
+                </a>
+
+                <a class="product-card wholesale" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Venta%20al%20por%20mayor%20Monte%20Viejo." target="_blank" rel="noopener">
+                  <img src="assets/images/catalogo-mayorista-horizontal.webp" alt="Sacos de café para venta al por mayor">
+                  <div class="product-content"><h3>Venta al por mayor</h3><span class="product-cta">Consultar por WhatsApp</span><p class="product-copy">Pedidos para cafeterías, restaurantes, tiendas, tostadores y distribuidores.</p><ul class="product-specs"><li>Café verde, tostado o molido</li><li>Entregas programadas</li><li>Precio según cantidad y frecuencia</li></ul></div>
+                </a>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="familia">
-        <div class="container family-grid story-layout">
-          <div class="text-stack">
-            <div class="section-kicker">
-              <div class="heritage-line" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <span class="eyebrow">Historia / Quiénes somos</span>
-            </div>
-            <h2>Nuestra historia nace en las montañas</h2>
-
+      <section class="section story-section" id="familia" aria-labelledby="story-title">
+        <div class="container family-grid">
+          <div class="story-copy">
+            <h2 id="story-title">Somos una familia cafetera de Rodríguez de Mendoza</h2>
             <div class="story-blocks">
-              <article class="story-block">
-                <h3>Nuestra historia</h3>
-                <p>
-                  Somos una empresa cafetera familiar nacida en las montañas de Rodríguez de Mendoza, Amazonas, una zona privilegiada por su clima, biodiversidad y suelos fértiles.
-                </p>
-                <p>
-                  Llevamos dos generaciones produciendo café. Este trabajo forma parte de nuestra vida diaria y de la historia de la familia.
-                </p>
-              </article>
-
-              <article class="story-block">
-                <h3>Café de altura, origen y calidad</h3>
-                <p>
-                  Nuestro café se cultiva por encima de los 1600 m s. n. m., lo que permite obtener granos de mayor densidad y perfiles de taza más complejos.
-                </p>
-                <p>
-                  Desde la selección del grano en campo hasta el control de calidad posterior, buscamos que cada lote conserve lo mejor de su origen.
-                </p>
-              </article>
-
-              <article class="story-block">
-                <h3>Compromiso con el medio ambiente</h3>
-                <p>
-                  Trabajamos en armonía con el entorno, aplicando prácticas responsables que protegen la biodiversidad y sostienen el cultivo.
-                </p>
-                <p>
-                  Cuidamos el suelo, el agua y los recursos que hacen posible nuestro café.
-                </p>
-              </article>
-
-              <article class="story-block">
-                <h3>Nuestra esencia</h3>
-                <p>
-                  Nos mueve el orgullo de mostrar al Perú y al mundo el potencial de Rodríguez de Mendoza con un producto auténtico, trazable y de especialidad.
-                </p>
-                <p>
-                  Cada bolsa representa esfuerzo familiar, trabajo de campo y valor de nuestra tierra.
-                </p>
-              </article>
+              <article class="story-block"><h3>Dos generaciones trabajando con café</h3><p>Somos una familia de las montañas de Rodríguez de Mendoza, Amazonas.</p></article>
+              <article class="story-block"><h3>Cómo cuidamos cada lote</h3><p>Seleccionamos el grano en el campo y revisamos su calidad después del proceso.</p></article>
+              <article class="story-block"><h3>Cuidar el lugar donde cultivamos</h3><p>Protegemos el suelo, el agua y la biodiversidad que hacen posible nuestro café.</p></article>
             </div>
           </div>
-
-          <figure class="feature-image family-photo">
+          <figure class="family-photo">
             <img src="assets/images/family-sq.png" alt="Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza">
-            <figcaption class="quote">Café de altura, tradición familiar y dedicación por la calidad. Desde Amazonas hasta tu taza.</figcaption>
+            <figcaption class="quote">Café de altura, tradición familiar y dedicación por la calidad.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section alt" id="coleccion">
-        <div class="container">
-          <div class="section-title-center">
-            <div class="heritage-line center" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <p class="eyebrow">Monte Viejo · Café de especialidad</p>
-            <h2>Catálogo de productos</h2>
-            <p class="section-intro">
-              Ofrecemos café verde, tostado en grano y molido para tostadores, negocios y consumidores que buscan calidad real.
-            </p>
-          </div>
-
-          <div class="origin-panel">
-            <div>
-              <p class="eyebrow">Información de origen</p>
-              <h3>Rodríguez de Mendoza - Amazonas</h3>
-              <p>
-                Café 100% arábica, cultivado en variedades Catimor y Típica, procesado bajo método lavado para una taza limpia, balanceada y dulce.
-              </p>
-            </div>
+      <section class="section origin-section" id="origen" aria-labelledby="origin-title">
+        <div class="container origin-panel">
+          <div class="origin-copy">
+            <h2 id="origin-title">Rodríguez de Mendoza, Amazonas</h2>
+            <p>Nuestro café es 100% arábica, de variedades Catimor y Típica. Usamos el proceso lavado para obtener una taza limpia, balanceada y dulce.</p>
             <dl class="origin-list">
               <div><dt>Altitud</dt><dd>+1600 m s. n. m.</dd></div>
               <div><dt>Proceso</dt><dd>Lavado</dd></div>
               <div><dt>Variedades</dt><dd>Catimor y Típica</dd></div>
               <div><dt>Puntaje estimado</dt><dd>83 SCA</dd></div>
             </dl>
-
-            <aside class="package-slider" aria-label="Galería automática de la bolsa Monte Viejo" tabindex="0">
-              <div class="package-slider-frame">
-                <img src="assets/images/bolsa-monte-viejo-frente.webp" alt="Vista frontal de la bolsa Monte Viejo de 500 g" loading="lazy">
-                <img src="assets/images/bolsa-monte-viejo-taza-square.webp" alt="Bolsa Monte Viejo junto a una taza de café" loading="lazy" hidden>
-                <img src="assets/images/bolsa-monte-viejo-cenital-square.webp" alt="Vista cenital de la bolsa Monte Viejo con granos de café" loading="lazy" hidden>
-              </div>
-              <div class="package-slider-meta">
-                <span>Bolsa de 500 g</span>
-                <span class="package-slider-count">1 / 3</span>
-              </div>
-            </aside>
           </div>
-
-          <div class="product-grid">
-            <a class="product-card" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Caf%C3%A9%20verde%20Monte%20Viejo." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre Café verde Monte Viejo">
-              <img src="assets/images/bag-forest.jpg" alt="Café verde Monte Viejo">
-              <h3>Café verde</h3>
-              <p class="product-copy">Seleccionado para tostadores, cafeterías y negocios que buscan origen definido, trazabilidad y consistencia.</p>
-              <ul class="product-specs">
-                <li>Sacos o por mayor según requerimiento</li>
-                <li>Perfil: cacao, miel, frutos secos</li>
-                <li>Venta según volumen y campaña</li>
-              </ul>
-              <span class="product-cta">Consultar por WhatsApp</span>
-            </a>
-
-            <a class="product-card featured" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Caf%C3%A9%20tostado%20en%20grano%20Monte%20Viejo." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre Café tostado en grano Monte Viejo">
-              <span class="badge">Recomendado</span>
-              <img src="assets/images/cafe-tostado-grano-con-bolsa.webp" alt="Bolsa Monte Viejo detrás de un recipiente con café tostado en grano">
-              <h3>Café tostado en grano</h3>
-              <p class="product-copy">Perfil balanceado para consumo diario y cafeterías. Resalta dulzor natural, aroma y taza limpia.</p>
-              <ul class="product-specs">
-                <li>Presentaciones: 500 g / 1 kg</li>
-                <li>Notas: caramelo, cacao, panela y nuez</li>
-                <li>Ideal para espresso, moka, prensa y filtrados</li>
-              </ul>
-              <span class="product-cta">Consultar por WhatsApp</span>
-            </a>
-
-            <a class="product-card" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Caf%C3%A9%20molido%20Monte%20Viejo." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre Café molido Monte Viejo">
-              <img src="assets/images/cafe-molido-con-bolsa.webp" alt="Bolsa Monte Viejo detrás de una cuchara con café molido">
-              <h3>Café molido</h3>
-              <p class="product-copy">Tostado y empacado para conservar frescura y aroma, pensado para practicidad sin perder calidad.</p>
-              <ul class="product-specs">
-                <li>Molienda fina, media o gruesa</li>
-                <li>Presentaciones: 500 g / 1 kg</li>
-                <li>Para cafetera eléctrica, moka, prensa y filtrado</li>
-              </ul>
-              <span class="product-cta">Consultar por WhatsApp</span>
-            </a>
-
-            <a class="product-card" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Venta%20al%20por%20mayor%20Monte%20Viejo." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre Venta al por mayor Monte Viejo">
-              <img src="assets/images/coffee-cherries.jpg" alt="Café para negocios Monte Viejo">
-              <h3>Venta al por mayor</h3>
-              <p class="product-copy">Abastecimiento para cafeterías, restaurantes, tiendas, tostadores y distribuidores.</p>
-              <ul class="product-specs">
-                <li>Café verde, tostado o molido</li>
-                <li>Entregas programadas</li>
-                <li>Precio según cantidad y frecuencia</li>
-              </ul>
-              <span class="product-cta">Consultar por WhatsApp</span>
-            </a>
-          </div>
+          <aside class="package-slider" aria-label="Galería de la bolsa Monte Viejo">
+            <div class="package-slider-frame">
+              <img src="assets/images/bolsa-monte-viejo-frente.webp" alt="Vista frontal de la bolsa Monte Viejo de 500 g">
+              <img src="assets/images/bolsa-monte-viejo-taza-square.webp" alt="Bolsa Monte Viejo junto a una taza de café" hidden>
+              <img src="assets/images/bolsa-monte-viejo-cenital-square.webp" alt="Vista cenital de la bolsa Monte Viejo con granos de café" hidden>
+            </div>
+            <div class="package-slider-meta">
+              <span>Bolsa de 500 g</span>
+              <div class="package-slider-controls">
+                <button class="package-slider-prev" type="button" aria-label="Ver imagen anterior">←</button>
+                <span class="package-slider-count" aria-live="polite">1 / 3</span>
+                <button class="package-slider-next" type="button" aria-label="Ver imagen siguiente">→</button>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section" id="mision">
+      <section class="section process-section" id="mision" aria-labelledby="process-title">
         <div class="container">
-          <div class="section-kicker">
-            <div class="heritage-line" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-            <span class="eyebrow">Misión / Visión</span>
+          <div class="section-heading process-heading">
+            <h2 id="process-title">Del cafetal a cada pedido</h2>
+            <p class="section-copy">Cultivamos el café, usamos el proceso lavado y revisamos la calidad de cada lote antes de preparar un pedido.</p>
           </div>
-          <h2>Tradición familiar, calidad real</h2>
-          <p class="section-copy">
-            Monte Viejo conecta trabajo de campo, origen trazable y café de especialidad para consumidores y negocios que valoran calidad constante.
-          </p>
-
           <div class="mission-grid">
-            <article class="value-card">
-              <span class="eyebrow">Misión</span>
-              <h3>Compartir el verdadero sabor del café de altura</h3>
-              <p>
-                Cultivamos café de Rodríguez de Mendoza con pasión y respeto por la naturaleza, ofreciendo un producto auténtico y de calidad.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <span class="eyebrow">Visión</span>
-              <h3>Ser puente entre Rodríguez de Mendoza y el mundo</h3>
-              <p>
-                Queremos llevar nuestra tradición familiar a cada taza y mostrar el potencial del café amazónico.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <span class="eyebrow">Negocios</span>
-              <h3>Café para cafeterías, restaurantes y tiendas</h3>
-              <p>
-                Atendemos compras por mayor, entregas programadas y requerimientos de café verde, tostado o molido.
-              </p>
-            </article>
+            <article class="value-card"><h3>Cultivo en Rodríguez de Mendoza</h3><p>Cultivamos café por encima de los 1600 m s. n. m. y cuidamos el entorno que lo hace posible.</p></article>
+            <article class="value-card"><h3>Proceso lavado</h3><p>Procesamos el café por vía lavada para obtener una taza limpia, balanceada y dulce.</p></article>
+            <article class="value-card"><h3>Revisión de cada lote</h3><p>Revisamos su calidad después del proceso y antes de preparar cada pedido.</p></article>
           </div>
         </div>
       </section>
 
       <section class="section invitation" id="contacto">
-        <div class="container">
-          <div class="heritage-line center" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-          <h2>Hablemos de tu próximo pedido</h2>
-          <p>
-            Consulta disponibilidad de café verde, tostado, molido o compras por mayor para negocios y distribuidores.
-          </p>
-          <a class="button contact-button" href="https://api.whatsapp.com/send?phone=51993908403" target="_blank" rel="noopener">
-            Cotizar por WhatsApp
-          </a>
+        <div class="container invitation-inner">
+          <h2>Cuéntanos qué café necesitas</h2>
+          <p>Escríbenos para pedir café tostado en grano o molido. Si compras para un negocio, también atendemos café verde y pedidos por mayor.</p>
+          <a class="button contact-button" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20caf%C3%A9%20Monte%20Viejo." target="_blank" rel="noopener">Pedir por WhatsApp</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <img class="footer-logo" src="assets/images/logo-black-main.png" alt="Monte Viejo">
-        <p class="eyebrow">Una marca familiar · Rodríguez de Mendoza, Amazonas</p>
-        <nav class="footer-links" aria-label="Pie de página">
-          <a href="#familia">Historia</a>
-          <a href="#coleccion">Catálogo</a>
-          <a href="#mision">Misión</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-        <div class="heritage-line" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
+        <a class="footer-brand" href="#inicio"><img class="footer-logo" src="assets/images/logo-black-main.png" alt="Monte Viejo"></a>
+        <p class="footer-origin">Familia cafetera · Rodríguez de Mendoza, Amazonas</p>
+        <nav class="footer-links" aria-label="Pie de página"><a href="#cafes">Nuestros cafés</a><a href="#familia">Familia</a><a href="#origen">Origen</a><a href="#contacto">Contacto</a></nav>
         <p class="copyright">2026 Monte Viejo. Café de especialidad desde Rodríguez de Mendoza, Amazonas.</p>
       </div>
     </footer>
+
     <script src="content.js" defer></script>
     <script src="assets/js/content-loader.js" defer></script>
   </body>

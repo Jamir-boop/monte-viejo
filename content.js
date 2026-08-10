@@ -9,10 +9,9 @@ window.siteContent = {
   },
 
   navigation: [
-    
-    { label: "Historia", href: "#familia" },
-    { label: "Catálogo", href: "#coleccion" },
-    { label: "Cómo trabajamos", href: "#mision" },
+    { label: "Nuestros cafés", href: "#cafes" },
+    { label: "Familia", href: "#familia" },
+    { label: "Origen", href: "#origen" },
     { label: "Contacto", href: "#contacto" }
   ],
 
@@ -21,10 +20,11 @@ window.siteContent = {
     title: "Monte Viejo",
     text: "Un café de especialidad para todos los días.",
     buttonText: "Pedir por WhatsApp",
-    whatsappText: "Hola, quiero hacer un pedido de café Monte Viejo.",
-    beanImage: "assets/images/coffee-bean.png",
-    beanAlt: "Grano de café Monte Viejo",
-    backgroundImage: "assets/images/hero-amazonas.jpg"
+    whatsappText: "Hola, quiero pedir café Monte Viejo.",
+    bagImage: "assets/images/bolsa-monte-viejo-frente.webp",
+    bagAlt: "Bolsa de café Monte Viejo de 500 g",
+    backgroundImage: "assets/images/hero-amazonas.jpg",
+    backgroundAlt: "Cafetales entre montañas y neblina en Rodríguez de Mendoza, Amazonas"
   },
 
   story: {
@@ -68,7 +68,7 @@ window.siteContent = {
   catalog: {
     eyebrow: "Café verde, tostado y molido",
     title: "Nuestros cafés",
-    intro: "Vendemos café verde, tostado en grano y molido. Atendemos a tostadores, cafeterías, otros negocios y personas que preparan café en casa.",
+    intro: "Café tostado en grano o molido para tu día a día. También ofrecemos café verde y pedidos para negocios.",
     origin: {
       eyebrow: "De dónde viene",
       title: "Rodríguez de Mendoza, Amazonas",
@@ -82,8 +82,36 @@ window.siteContent = {
     },
     products: [
       {
+        title: "Café tostado en grano",
+        badge: "Para todos los días",
+        featured: true,
+        image: "assets/images/catalogo-tostado-horizontal.webp",
+        imageAlt: "Bolsa Monte Viejo detrás de un recipiente con café tostado en grano",
+        text: "Es un tueste balanceado para tomar todos los días o servir en cafetería. Tiene dulzor natural, buen aroma y una taza limpia.",
+        specs: [
+          "Bolsas de 500 g y 1 kg",
+          "Notas de caramelo, cacao, panela y nuez",
+          "Para espresso, moka, prensa y métodos filtrados"
+        ],
+        cta: "Pedir por WhatsApp",
+        whatsappText: "Hola, quiero pedir Café tostado en grano Monte Viejo."
+      },
+      {
+        title: "Café molido",
+        image: "assets/images/catalogo-molido-horizontal.webp",
+        imageAlt: "Bolsa Monte Viejo detrás de una cuchara con café molido",
+        text: "Lo tostamos, molemos y empacamos para conservar su aroma. Puedes elegir la molienda según cómo prepares tu café.",
+        specs: [
+          "Molienda fina, media o gruesa",
+          "Bolsas de 500 g y 1 kg",
+          "Para cafetera eléctrica, moka, prensa y métodos filtrados"
+        ],
+        cta: "Pedir por WhatsApp",
+        whatsappText: "Hola, quiero pedir Café molido Monte Viejo."
+      },
+      {
         title: "Café verde",
-        image: "assets/images/cafe-verde-studio.webp",
+        image: "assets/images/catalogo-verde-horizontal.webp",
         imageAlt: "Saco abierto con granos de café verde sin tostar",
         text: "Seleccionamos café verde para tostadores y cafeterías que necesitan un origen identificado y lotes consistentes.",
         specs: [
@@ -95,36 +123,8 @@ window.siteContent = {
         whatsappText: "Hola, quiero consultar por Café verde Monte Viejo."
       },
       {
-        title: "Café tostado en grano",
-        badge: "Para todos los días",
-        featured: true,
-        image: "assets/images/cafe-tostado-grano-con-bolsa.webp",
-        imageAlt: "Bolsa Monte Viejo detrás de un recipiente con café tostado en grano",
-        text: "Es un tueste balanceado para tomar todos los días o servir en cafetería. Tiene dulzor natural, buen aroma y una taza limpia.",
-        specs: [
-          "Bolsas de 500 g y 1 kg",
-          "Notas de caramelo, cacao, panela y nuez",
-          "Para espresso, moka, prensa y métodos filtrados"
-        ],
-        cta: "Consultar por WhatsApp",
-        whatsappText: "Hola, quiero consultar por Café tostado en grano Monte Viejo."
-      },
-      {
-        title: "Café molido",
-        image: "assets/images/cafe-molido-con-bolsa.webp",
-        imageAlt: "Bolsa Monte Viejo detrás de una cuchara con café molido",
-        text: "Lo tostamos, molemos y empacamos para conservar su aroma. Puedes elegir la molienda según cómo prepares tu café.",
-        specs: [
-          "Molienda fina, media o gruesa",
-          "Bolsas de 500 g y 1 kg",
-          "Para cafetera eléctrica, moka, prensa y métodos filtrados"
-        ],
-        cta: "Consultar por WhatsApp",
-        whatsappText: "Hola, quiero consultar por Café molido Monte Viejo."
-      },
-      {
         title: "Venta al por mayor",
-        image: "assets/images/venta-mayorista-studio.webp",
+        image: "assets/images/catalogo-mayorista-horizontal.webp",
         imageAlt: "Sacos de café para venta al por mayor",
         text: "Preparamos pedidos para cafeterías, restaurantes, tiendas, tostadores y distribuidores.",
         specs: [
@@ -141,31 +141,31 @@ window.siteContent = {
   mission: {
     kicker: "Cómo trabajamos",
     title: "Del cafetal a cada pedido",
-    text: "Cultivamos el café y revisamos el origen de cada lote antes de preparar un pedido. Vendemos a personas y negocios que buscan una calidad constante.",
+    text: "Cultivamos el café, usamos el proceso lavado y revisamos la calidad de cada lote antes de preparar un pedido.",
     cards: [
       {
         eyebrow: "En la finca",
-        title: "Café de altura de Rodríguez de Mendoza",
-        text: "Cultivamos café con respeto por el entorno y cuidamos su calidad desde la finca hasta cada pedido."
+        title: "Cultivo en Rodríguez de Mendoza",
+        text: "Cultivamos café por encima de los 1600 m s. n. m. y cuidamos el entorno que lo hace posible."
       },
       {
-        eyebrow: "A dónde queremos llegar",
-        title: "Llevar nuestro café a más lugares",
-        text: "Queremos vender café de Amazonas en más lugares y seguir trabajando en familia como lo hacemos hoy."
+        eyebrow: "Después de la cosecha",
+        title: "Proceso lavado",
+        text: "Procesamos el café por vía lavada para obtener una taza limpia, balanceada y dulce."
       },
       {
-        eyebrow: "Para negocios",
-        title: "Pedidos para cafeterías, restaurantes y tiendas",
-        text: "Atendemos compras por mayor, entregas programadas y requerimientos de café verde, tostado o molido."
+        eyebrow: "Antes de entregar",
+        title: "Revisión de cada lote",
+        text: "Revisamos su calidad después del proceso y antes de preparar cada pedido."
       }
     ]
   },
 
   contact: {
     title: "Cuéntanos qué café necesitas",
-    text: "Escríbenos para consultar disponibilidad de café verde, tostado o molido. También atendemos pedidos por mayor.",
-    buttonText: "Cotizar por WhatsApp",
-    whatsappText: "Hola, quiero cotizar café Monte Viejo."
+    text: "Escríbenos para pedir café tostado en grano o molido. Si compras para un negocio, también atendemos café verde y pedidos por mayor.",
+    buttonText: "Pedir por WhatsApp",
+    whatsappText: "Hola, quiero pedir café Monte Viejo."
   },
 
   footer: {

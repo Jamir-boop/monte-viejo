@@ -35,18 +35,6 @@
     return `${base}&text=${encodeURIComponent(message)}`;
   };
 
-  const stylesheetUrl = (path) => {
-    if (/^(https?:|data:|\/)/.test(path)) {
-      return path;
-    }
-
-    if (path.startsWith("assets/")) {
-      return `../${path.slice("assets/".length)}`;
-    }
-
-    return path;
-  };
-
   const setLink = (selector, label, href) => {
     const element = document.querySelector(selector);
     if (!element) {
@@ -176,9 +164,32 @@
     });
   };
 
+  const renderHeroProof = () => {
+    const container = document.querySelector(".hero-proof");
+    const origin = content.catalog?.origin;
+    if (!container || !origin || !Array.isArray(origin.specs)) {
+      return;
+    }
+
+    const proof = [
+      { label: "Origen", value: origin.title },
+      ...origin.specs.filter((spec) => ["Altitud", "Proceso", "Puntaje estimado"].includes(spec.label))
+    ];
+
+    container.replaceChildren();
+    proof.forEach((spec) => {
+      const item = document.createElement("div");
+      item.appendChild(createElement("dt", "", spec.label));
+      item.appendChild(createElement("dd", "", spec.value));
+      container.appendChild(item);
+    });
+  };
+
   const initPackageSlider = () => {
     const slider = document.querySelector(".package-slider");
     const count = slider?.querySelector(".package-slider-count");
+    const previous = slider?.querySelector(".package-slider-prev");
+    const next = slider?.querySelector(".package-slider-next");
     const slides = slider ? Array.from(slider.querySelectorAll(".package-slider-frame > img")) : [];
 
     if (slides.length < 2) {
@@ -201,16 +212,8 @@
     };
 
     show(0);
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    window.setInterval(() => {
-      if (!document.hidden && !slider.matches(":hover, :focus-within")) {
-        show(current + 1);
-      }
-    }, 4000);
+    previous?.addEventListener("click", () => show(current - 1));
+    next?.addEventListener("click", () => show(current + 1));
   };
 
   const renderProducts = () => {
@@ -221,12 +224,19 @@
     }
 
     container.replaceChildren();
-    products.forEach((product) => {
-      const card = createElement("a", product.featured ? "product-card featured" : "product-card");
+    const business = createElement("details", "business-products");
+    const summary = createElement("summary", "", "¿Compras para tu negocio? ");
+    summary.appendChild(createElement("span", "", "Ver café verde y pedidos por mayor"));
+    business.appendChild(summary);
+    const businessGrid = createElement("div", "business-grid");
+    business.appendChild(businessGrid);
+
+    products.forEach((product, index) => {
+      const card = createElement("a", `product-card ${["featured", "ground", "green", "wholesale"][index] || ""}`.trim());
       card.href = whatsappUrl(product.whatsappText);
       card.target = "_blank";
       card.rel = "noopener";
-      card.setAttribute("aria-label", `Consultar por WhatsApp sobre ${product.title}`);
+      card.setAttribute("aria-label", `${product.cta} sobre ${product.title}`);
 
       if (product.badge) {
         card.appendChild(createElement("span", "badge", product.badge));
@@ -236,8 +246,11 @@
       img.src = product.image || "";
       img.alt = product.imageAlt || product.title || "";
       card.appendChild(img);
-      card.appendChild(createElement("h3", "", product.title));
-      card.appendChild(createElement("p", "product-copy", product.text));
+
+      const body = createElement("div", "product-content");
+      body.appendChild(createElement("h3", "", product.title));
+      body.appendChild(createElement("span", "product-cta", product.cta));
+      body.appendChild(createElement("p", "product-copy", product.text));
 
       const list = createElement("ul", "product-specs");
       if (Array.isArray(product.specs)) {
@@ -245,10 +258,14 @@
           list.appendChild(createElement("li", "", item));
         });
       }
-      card.appendChild(list);
-      card.appendChild(createElement("span", "product-cta", product.cta));
-      container.appendChild(card);
+      body.appendChild(list);
+      card.appendChild(body);
+      (index < 2 ? container : businessGrid).appendChild(card);
     });
+
+    if (businessGrid.children.length) {
+      container.appendChild(business);
+    }
   };
 
   const renderMissionCards = () => {
@@ -261,7 +278,6 @@
     container.replaceChildren();
     cards.forEach((card) => {
       const article = createElement("article", "value-card");
-      article.appendChild(createElement("span", "eyebrow", card.eyebrow));
       article.appendChild(createElement("h3", "", card.title));
       article.appendChild(createElement("p", "", card.text));
       container.appendChild(article);
@@ -292,16 +308,12 @@
 
   renderNav();
 
-  image(".hero-bean", hero.beanImage, hero.beanAlt);
-  const heroSection = document.querySelector(".hero");
-  if (heroSection && typeof hero.backgroundImage === "string") {
-    heroSection.style.setProperty("--hero-background", `url("${stylesheetUrl(hero.backgroundImage)}")`);
-  }
-  text(".hero .eyebrow", hero.eyebrow);
+  image(".hero-bag", hero.bagImage || hero.beanImage, hero.bagAlt || hero.beanAlt);
+  image(".hero-landscape-image", hero.backgroundImage, hero.backgroundAlt);
   text("#hero-title", hero.title);
   text(".hero-copy", hero.text);
   setLink(".hero .button", hero.buttonText, whatsappUrl(hero.whatsappText));
-  setLink(".nav-cta", "WhatsApp", whatsappUrl());
+  setLink(".nav-cta", null, whatsappUrl(hero.whatsappText));
   syncExclusiveCtas();
 
   text("#familia .section-kicker .eyebrow", story.kicker);
@@ -310,13 +322,12 @@
   text(".family-photo .quote", story.caption);
   renderStoryBlocks();
 
-  text("#coleccion .section-title-center .eyebrow", catalog.eyebrow);
-  text("#coleccion .section-title-center h2", catalog.title);
-  text("#coleccion .section-intro", catalog.intro);
-  text(".origin-panel .eyebrow", origin.eyebrow);
-  text(".origin-panel h3", origin.title);
-  text(".origin-panel p:not(.eyebrow)", origin.text);
+  text("#cafes h2", catalog.title);
+  text("#cafes .section-intro", catalog.intro);
+  text("#origin-title", origin.title);
+  text(".origin-copy > p", origin.text);
   renderOriginSpecs();
+  renderHeroProof();
   initPackageSlider();
   renderProducts();
 
@@ -329,6 +340,6 @@
   text("#contacto p", contact.text);
   setLink("#contacto .button", contact.buttonText, whatsappUrl(contact.whatsappText));
 
-  text(".site-footer .eyebrow", footer.eyebrow);
+  text(".site-footer .footer-origin", footer.eyebrow);
   text(".copyright", footer.copyright);
 })();
