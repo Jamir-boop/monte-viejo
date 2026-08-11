@@ -29,7 +29,7 @@ Make `https://monteviejo.org/` easy for Google to crawl, understand, index, and 
 
 ## Phase 1: Index integrity and search metadata
 
-Status: local implementation complete; Cloudflare redirect active; deployment pending
+Status: complete and verified in production
 
 - [x] Add the HTTPS canonical URL.
 - [x] Align the static and JavaScript title and description.
@@ -118,7 +118,7 @@ Status: planned after indexing
 ## Campaign launch gate
 
 - [x] HTTP redirects permanently to the HTTPS canonical.
-- [ ] `code.html` is unavailable.
+- [x] `code.html` is unavailable.
 - [ ] Search Console accepts the sitemap and live homepage.
 - [ ] WhatsApp conversion tracking passes a test.
 - [x] Mobile image loading and the WhatsApp CTA pass functional checks.
@@ -163,10 +163,12 @@ Local implementation completed on 2026-08-11:
 - The package gallery advances to item `2 / 3` with the correct visible image.
 - The deployment build generates static metadata, structured data, and WhatsApp phone values from `content.js`.
 - Cloudflare redirects HTTP to the HTTPS canonical with `301 Moved Permanently`.
+- GitHub Pages deployed commit `9a9ae63` successfully through the generated-site workflow.
+- Production returns `200` for the homepage, `robots.txt`, and `sitemap.xml`; `code.html` returns `404`.
+- Production metadata, images, WhatsApp links, browser console, and horizontal overflow checks pass.
 
 Still not verified:
 
-- Live behavior after deployment.
 - Authenticated Search Console indexing and selected canonical.
 - Field Core Web Vitals.
 - Analytics and Google Ads conversion tracking.
