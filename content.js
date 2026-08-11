@@ -34,40 +34,15 @@ window.siteContent = {
   },
 
   story: {
-    kicker: "Quiénes somos",
     title: "Somos una familia cafetera de Rodríguez de Mendoza",
+    intro: "Somos una familia de Rodríguez de Mendoza, Amazonas, y llevamos dos generaciones cultivando café. Cuidamos cada lote y el entorno que hace posible este origen.",
     image: "assets/images/family-sq.webp",
     imageAlt: "Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza",
     caption: "Café de altura, tradición familiar y dedicación por la calidad",
-    blocks: [
-      {
-        title: "Dos generaciones trabajando con café",
-        paragraphs: [
-          "Somos una familia de las montañas de Rodríguez de Mendoza, Amazonas. Aquí, el clima, la biodiversidad y los suelos permiten cultivar café de altura.",
-          "Llevamos dos generaciones produciendo café. Este trabajo forma parte de nuestra vida diaria y de la historia de la familia."
-        ]
-      },
-      {
-        title: "Cómo cuidamos cada lote",
-        paragraphs: [
-          "Nuestro café crece por encima de los 1600 m s. n. m. A esa altitud, los granos desarrollan mayor densidad y perfiles de taza más complejos.",
-          "Seleccionamos el grano en el campo y revisamos su calidad después del proceso para que cada lote conserve las características de su origen."
-        ]
-      },
-      {
-        title: "Cuidar el lugar donde cultivamos",
-        paragraphs: [
-          "Usamos prácticas que protegen la biodiversidad y ayudan a sostener el cultivo.",
-          "También cuidamos el suelo, el agua y los demás recursos que hacen posible nuestro café."
-        ]
-      },
-      {
-        title: "Café de Rodríguez de Mendoza",
-        paragraphs: [
-          "Queremos que más personas en el Perú y otros países conozcan el café de nuestra zona: un café trazable y de especialidad.",
-          "Cada bolsa sale del trabajo de campo de nuestra familia y de la tierra que cultivamos."
-        ]
-      }
+    proof: [
+      { label: "Dos generaciones", value: "Cultivando café" },
+      { label: "Rodríguez de Mendoza", value: "Amazonas, Perú" },
+      { label: "Café de altura", value: "+1600 m s. n. m." }
     ]
   },
 

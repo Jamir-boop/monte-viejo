@@ -1,0 +1,3 @@
+[mcp_servers.openseo]
+url = "https://app.openseo.so/mcp"
+auth = "oauth"

@@ -26,7 +26,10 @@ const required = {
   socialImage: site?.socialImage,
   socialImageAlt: site?.socialImageAlt,
   heroBrand: content.hero?.title,
-  heroTitle: content.hero?.text
+  heroTitle: content.hero?.text,
+  storyTitle: content.story?.title,
+  storyIntro: content.story?.intro,
+  storyCaption: content.story?.caption
 };
 
 for (const [name, value] of Object.entries(required)) {
@@ -147,6 +150,14 @@ if (organization?.telephone !== `+${site.whatsappPhone}` || phones.some((phone) 
 
 if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes(escapeHtml(content.hero.text))) {
   throw new Error("Generated page must contain one content-driven H1");
+}
+
+if (!Array.isArray(content.story?.proof) || content.story.proof.length !== 3 || content.story.proof.some((item) => !item.label || !item.value)) {
+  throw new Error("content.story.proof must contain three complete items");
+}
+
+if (!html.includes(escapeHtml(content.story.intro)) || content.story.proof.some((item) => !html.includes(escapeHtml(item.label)) || !html.includes(escapeHtml(item.value)))) {
+  throw new Error("Generated family section does not match content.js");
 }
 
 if (!html.includes('<details class="business-products" open>')) {

@@ -189,6 +189,8 @@ The page uses centered fluid containers capped at 1240px, with a 48px desktop gu
 
 Desktop sections use direct two-column compositions, a twelve-column product grid, and generous gaps. Product cards shift from asymmetric five/seven-column spans to equal halves below 1050px and a single column below 820px. The hero becomes a stacked red message and farm window below 820px; its action remains before the imagery and the origin proof becomes a two-by-two grid.
 
+The family section is a compact proof moment rather than a long-form story: an organic 4:3 photograph supports a short introduction and three hairline-separated facts. It uses the 84px section rhythm on desktop and places copy before photography on narrow screens.
+
 ## Elevation & Depth
 
 The system is mostly flat and tonal. White, paper, blush, and cherry fields create structure without framing every section; ambient shadows belong to photographic objects, action pills, and meaningful card hover lift. Organic masks, overlap, subtle image scale, and a single gloss sweep provide depth without turning the page into a stack of floating panels.

@@ -126,25 +126,19 @@
     renderLinks(".footer-links");
   };
 
-  const renderStoryBlocks = () => {
-    const blocks = content.story?.blocks;
-    const container = document.querySelector(".story-blocks");
-    if (!container || !Array.isArray(blocks)) {
+  const renderFamilyProof = () => {
+    const proof = content.story?.proof;
+    const container = document.querySelector(".family-proof");
+    if (!container || !Array.isArray(proof)) {
       return;
     }
 
     container.replaceChildren();
-    blocks.forEach((block) => {
-      const article = createElement("article", "story-block");
-      article.appendChild(createElement("h3", "", block.title));
-
-      if (Array.isArray(block.paragraphs)) {
-        block.paragraphs.forEach((paragraph) => {
-          article.appendChild(createElement("p", "", paragraph));
-        });
-      }
-
-      container.appendChild(article);
+    proof.forEach((item) => {
+      const row = document.createElement("div");
+      row.appendChild(createElement("dt", "", item.label));
+      row.appendChild(createElement("dd", "", item.value));
+      container.appendChild(row);
     });
   };
 
@@ -325,11 +319,11 @@
   setLink(".nav-cta", null, whatsappUrl(hero.whatsappText));
   syncExclusiveCtas();
 
-  text("#familia .section-kicker .eyebrow", story.kicker);
   text("#familia h2", story.title);
+  text("#familia .story-intro", story.intro);
   image(".family-photo img", story.image, story.imageAlt);
   text(".family-photo .quote", story.caption);
-  renderStoryBlocks();
+  renderFamilyProof();
 
   text("#cafes h2", catalog.title);
   text("#cafes .section-intro", catalog.intro);
