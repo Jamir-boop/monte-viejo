@@ -226,6 +226,12 @@
 
     container.replaceChildren();
     const business = createElement("details", "business-products");
+    const businessBreakpoint = window.matchMedia("(max-width: 820px)");
+    const syncBusinessDisclosure = () => {
+      business.open = !businessBreakpoint.matches;
+    };
+    syncBusinessDisclosure();
+    businessBreakpoint.addEventListener("change", syncBusinessDisclosure);
     const summary = createElement("summary", "", "¿Compras para tu negocio? ");
     summary.appendChild(createElement("span", "", "Ver café verde y pedidos por mayor"));
     business.appendChild(summary);

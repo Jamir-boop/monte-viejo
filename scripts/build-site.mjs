@@ -149,6 +149,10 @@ if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes(escapeHtml(conte
   throw new Error("Generated page must contain one content-driven H1");
 }
 
+if (!html.includes('<details class="business-products" open>')) {
+  throw new Error("Business products must be visible without JavaScript on desktop");
+}
+
 if (localAssets.some((asset) => !existsSync(resolve(root, asset)))) {
   throw new Error("Generated page references a missing local asset");
 }
