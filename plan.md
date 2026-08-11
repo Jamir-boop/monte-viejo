@@ -34,7 +34,7 @@ Status: complete and verified in production
 - [x] Add the HTTPS canonical URL.
 - [x] Align the static and JavaScript title and description.
 - [x] Use the `es-PE` language tag.
-- [x] Add Open Graph and social preview metadata.
+- [x] Add Open Graph and social preview metadata with a dedicated 1200 × 630 image.
 - [x] Add factual `Organization`, `WebSite`, and `WebPage` JSON-LD.
 - [x] Generate static SEO metadata and fallback WhatsApp links from `content.js` during deployment.
 - [x] Add a root `robots.txt` that allows crawling and declares the sitemap.

@@ -12,7 +12,6 @@ vm.runInNewContext(contentSource, sandbox, { filename: "content.js" });
 
 const content = sandbox.window.siteContent;
 const site = content?.site;
-const socialProduct = content?.catalog?.products?.[0];
 
 const required = {
   title: site?.title,
@@ -24,8 +23,8 @@ const required = {
   organizationDescription: site?.organizationDescription,
   logo: site?.logo,
   whatsappPhone: site?.whatsappPhone,
-  socialImage: socialProduct?.image,
-  socialImageAlt: socialProduct?.imageAlt
+  socialImage: site?.socialImage,
+  socialImageAlt: site?.socialImageAlt
 };
 
 for (const [name, value] of Object.entries(required)) {
@@ -78,7 +77,7 @@ const structuredData = {
       inLanguage: site.language,
       isPartOf: { "@id": `${canonicalUrl}#website` },
       about: { "@id": `${canonicalUrl}#organization` },
-      primaryImageOfPage: absoluteUrl(socialProduct.image)
+      primaryImageOfPage: absoluteUrl(site.socialImage)
     }
   ]
 };
@@ -95,13 +94,16 @@ const seo = `<!-- seo:generated:start -->
     <meta property="og:title" content="${escapeHtml(site.title)}">
     <meta property="og:description" content="${escapeHtml(site.description)}">
     <meta property="og:url" content="${escapeHtml(canonicalUrl)}">
-    <meta property="og:image" content="${escapeHtml(absoluteUrl(socialProduct.image))}">
-    <meta property="og:image:alt" content="${escapeHtml(socialProduct.imageAlt)}">
+    <meta property="og:image" content="${escapeHtml(absoluteUrl(site.socialImage))}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="${escapeHtml(site.socialImageAlt)}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeHtml(site.title)}">
     <meta name="twitter:description" content="${escapeHtml(site.description)}">
-    <meta name="twitter:image" content="${escapeHtml(absoluteUrl(socialProduct.image))}">
-    <meta name="twitter:image:alt" content="${escapeHtml(socialProduct.imageAlt)}">
+    <meta name="twitter:image" content="${escapeHtml(absoluteUrl(site.socialImage))}">
+    <meta name="twitter:image:alt" content="${escapeHtml(site.socialImageAlt)}">
     <script type="application/ld+json">
 ${jsonLd.split("\n").map((line) => `      ${line}`).join("\n")}
     </script>
