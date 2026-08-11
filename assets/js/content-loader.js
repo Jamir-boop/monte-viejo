@@ -197,7 +197,8 @@
     }
 
     slides.forEach((slide) => {
-      slide.loading = "eager";
+      slide.loading = "lazy";
+      slide.decoding = "async";
     });
 
     let current = 0;
@@ -245,6 +246,10 @@
       const img = createElement("img");
       img.src = product.image || "";
       img.alt = product.imageAlt || product.title || "";
+      img.width = 1600;
+      img.height = 900;
+      img.loading = "lazy";
+      img.decoding = "async";
       card.appendChild(img);
 
       const body = createElement("div", "product-content");

@@ -5,6 +5,8 @@ Editar solo estos dos lugares:
 - `content.js`: textos, número de WhatsApp y rutas de imágenes.
 - `assets/images/`: imágenes nuevas.
 
+Al publicar, GitHub genera automáticamente el título, la descripción, los enlaces de WhatsApp y los datos para Google desde `content.js`. No duplicar esos cambios en `index.html`.
+
 ## Cambiar texto
 
 1. Abrir `content.js` en GitHub.
@@ -53,7 +55,7 @@ image: "assets/images/cafe-tostado-2026.jpg",
 - Usar nombres en minúsculas.
 - Usar guiones en vez de espacios.
 - Mantener imágenes debajo de 500 KB cuando sea posible.
-- Imágenes de productos funcionan mejor en formato vertical.
+- Imágenes de productos deben usar formato horizontal 16:9, idealmente 1600 × 900 px.
 - Imagen familiar funciona mejor en formato cuadrado.
 
 ## No editar

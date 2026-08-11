@@ -1,8 +1,12 @@
 window.siteContent = {
   site: {
-    title: "Monte Viejo | Café de especialidad",
-    description: "Café de especialidad de Rodríguez de Mendoza, Amazonas. Café verde, tostado y molido, con prácticas que cuidan el entorno.",
+    title: "Café de especialidad de Amazonas | Monte Viejo",
+    description: "Café de especialidad de Rodríguez de Mendoza, Amazonas. Elige café tostado en grano o molido y pide Monte Viejo por WhatsApp.",
     brandName: "Monte Viejo",
+    canonicalUrl: "https://monteviejo.org/",
+    language: "es-PE",
+    locale: "es_PE",
+    organizationDescription: "Familia productora de café de especialidad de Rodríguez de Mendoza, Amazonas.",
     logo: "assets/images/logo-black-main.png",
     logoAlt: "Monte Viejo",
     whatsappPhone: "51993908403"
@@ -18,19 +22,19 @@ window.siteContent = {
   hero: {
     eyebrow: "Rodríguez de Mendoza, Amazonas · Más de 1600 m s. n. m.",
     title: "Monte Viejo",
-    text: "Un café de especialidad para todos los días.",
+    text: "Café de especialidad de Rodríguez de Mendoza, Amazonas, para todos los días.",
     buttonText: "Pedir por WhatsApp",
     whatsappText: "Hola, quiero pedir café Monte Viejo.",
     bagImage: "assets/images/bolsa-monte-viejo-frente.webp",
     bagAlt: "Bolsa de café Monte Viejo de 500 g",
-    backgroundImage: "assets/images/hero-amazonas.jpg",
+    backgroundImage: "assets/images/hero-amazonas.webp",
     backgroundAlt: "Cafetales entre montañas y neblina en Rodríguez de Mendoza, Amazonas"
   },
 
   story: {
     kicker: "Quiénes somos",
     title: "Somos una familia cafetera de Rodríguez de Mendoza",
-    image: "assets/images/family-sq.png",
+    image: "assets/images/family-sq.webp",
     imageAlt: "Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza",
     caption: "Café de altura, tradición familiar y dedicación por la calidad",
     blocks: [
