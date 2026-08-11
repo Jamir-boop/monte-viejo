@@ -9,8 +9,8 @@ window.siteContent = {
     organizationDescription: "Familia productora de café de especialidad de Rodríguez de Mendoza, Amazonas.",
     logo: "assets/images/logo-black-main.png",
     logoAlt: "Monte Viejo",
-    socialImage: "assets/images/share-monte-viejo-graphic.jpg",
-    socialImageAlt: "Bolsa de café Monte Viejo, cerezas de café y montañas de Rodríguez de Mendoza, Amazonas",
+    socialImage: "assets/images/share-monte-viejo-family.jpg",
+    socialImageAlt: "Familia caficultora de Monte Viejo en una finca de Rodríguez de Mendoza, Amazonas, junto a una bolsa de café",
     whatsappPhone: "51993908403"
   },
 

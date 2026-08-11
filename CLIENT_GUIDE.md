@@ -54,14 +54,14 @@ image: "assets/images/cafe-tostado-2026.jpg",
 La vista previa de WhatsApp y redes usa `site.socialImage` en `content.js`. Use una imagen JPEG de `1200 x 630` píxeles y cambie esta ruta:
 
 ```js
-socialImage: "assets/images/share-monte-viejo-graphic.jpg",
+socialImage: "assets/images/share-monte-viejo-family.jpg",
 ```
 
 Opciones incluidas:
 
-- `assets/images/share-monte-viejo-graphic.jpg` — producto y origen; opción activa.
+- `assets/images/share-monte-viejo-graphic.jpg` — producto y origen.
 - `assets/images/share-monte-viejo-origin.jpg` — paisaje y producto.
-- `assets/images/share-monte-viejo-family.jpg` — familia y origen.
+- `assets/images/share-monte-viejo-family.jpg` — familia y origen; opción activa.
 
 ## Reglas para imágenes
 
