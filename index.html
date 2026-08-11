@@ -69,11 +69,13 @@
       }
     </script>
     <!-- seo:generated:end -->
-    <link rel="icon" type="image/jpeg" href="assets/images/logo-black-main.jpeg">
+    <link rel="icon" type="image/png" href="assets/images/logo-black-main.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260811-1546">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260811-1710">
   </head>
   <body>
     <!--
@@ -87,7 +89,7 @@
     <header class="site-header">
       <nav class="nav" aria-label="Principal">
         <a class="brand" href="#inicio" aria-label="Monte Viejo inicio">
-          <img src="assets/images/logo-black-main.png" alt="" width="1599" height="1591" decoding="async">
+          <img src="assets/images/logo-black-main.png" alt="" width="256" height="255" decoding="async">
           <span>Monte Viejo</span>
         </a>
         <div class="nav-links">
@@ -108,7 +110,7 @@
         <div class="hero-inner">
           <div class="hero-message">
             <div class="hero-title-line">
-              <h1 id="hero-title">Monte Viejo</h1>
+              <p class="hero-brand">Monte Viejo</p>
               <svg class="hero-bloom" viewBox="0 0 100 100" aria-hidden="true">
                 <g fill="currentColor" transform="translate(50 50)">
                   <ellipse rx="8" ry="27" transform="rotate(0) translate(0 -27)"></ellipse>
@@ -121,7 +123,7 @@
                 </g>
               </svg>
             </div>
-            <p class="hero-copy">Café de especialidad de Rodríguez de Mendoza, Amazonas, para todos los días.</p>
+            <h1 class="hero-copy" id="hero-title">Café de especialidad de Rodríguez de Mendoza, Amazonas, para todos los días.</h1>
             <a class="button hero-button" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20caf%C3%A9%20Monte%20Viejo." target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
 
@@ -151,7 +153,7 @@
           <div class="product-grid">
             <a class="product-card featured" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20Caf%C3%A9%20tostado%20en%20grano%20Monte%20Viejo." target="_blank" rel="noopener">
               <span class="badge">Para todos los días</span>
-              <img src="assets/images/catalogo-tostado-horizontal.webp" alt="Bolsa Monte Viejo detrás de un recipiente con café tostado en grano" width="1600" height="900" loading="lazy" decoding="async">
+              <img src="assets/images/catalogo-tostado-horizontal.webp" alt="Bolsa Monte Viejo detrás de un recipiente con café tostado en grano" width="1200" height="675" loading="lazy" decoding="async">
               <div class="product-content">
                 <h3>Café tostado en grano</h3>
                 <span class="product-cta">Pedir por WhatsApp</span>
@@ -161,7 +163,7 @@
             </a>
 
             <a class="product-card ground" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20pedir%20Caf%C3%A9%20molido%20Monte%20Viejo." target="_blank" rel="noopener">
-              <img src="assets/images/catalogo-molido-horizontal.webp" alt="Bolsa Monte Viejo detrás de una cuchara con café molido" width="1600" height="900" loading="lazy" decoding="async">
+              <img src="assets/images/catalogo-molido-horizontal.webp" alt="Bolsa Monte Viejo detrás de una cuchara con café molido" width="1200" height="675" loading="lazy" decoding="async">
               <div class="product-content"><h3>Café molido</h3><span class="product-cta">Pedir por WhatsApp</span><p class="product-copy">Molienda fina, media o gruesa según cómo prepares tu café.</p><ul class="product-specs"><li>Bolsas de 500 g y 1 kg</li><li>Empacado para conservar aroma</li><li>Para cafetera, moka, prensa y filtrado</li></ul></div>
             </a>
 
@@ -169,12 +171,12 @@
               <summary>¿Compras para tu negocio? <span>Ver café verde y pedidos por mayor</span></summary>
               <div class="business-grid">
                 <a class="product-card green" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Caf%C3%A9%20verde%20Monte%20Viejo." target="_blank" rel="noopener">
-                  <img src="assets/images/catalogo-verde-horizontal.webp" alt="Saco abierto con granos de café verde sin tostar" width="1600" height="900" loading="lazy" decoding="async">
+                  <img src="assets/images/catalogo-verde-horizontal.webp" alt="Saco abierto con granos de café verde sin tostar" width="1200" height="675" loading="lazy" decoding="async">
                   <div class="product-content"><h3>Café verde</h3><span class="product-cta">Consultar por WhatsApp</span><p class="product-copy">Origen identificado y lotes consistentes para tostadores y cafeterías.</p><ul class="product-specs"><li>Disponible en sacos y por mayor</li><li>Perfil de cacao, miel y frutos secos</li><li>Según volumen y campaña</li></ul></div>
                 </a>
 
                 <a class="product-card wholesale" href="https://api.whatsapp.com/send?phone=51993908403&amp;text=Hola%2C%20quiero%20consultar%20por%20Venta%20al%20por%20mayor%20Monte%20Viejo." target="_blank" rel="noopener">
-                  <img src="assets/images/catalogo-mayorista-horizontal.webp" alt="Sacos de café para venta al por mayor" width="1600" height="900" loading="lazy" decoding="async">
+                  <img src="assets/images/catalogo-mayorista-horizontal.webp" alt="Sacos de café para venta al por mayor" width="1200" height="675" loading="lazy" decoding="async">
                   <div class="product-content"><h3>Venta al por mayor</h3><span class="product-cta">Consultar por WhatsApp</span><p class="product-copy">Pedidos para cafeterías, restaurantes, tiendas, tostadores y distribuidores.</p><ul class="product-specs"><li>Café verde, tostado o molido</li><li>Entregas programadas</li><li>Precio según cantidad y frecuencia</li></ul></div>
                 </a>
               </div>
@@ -194,7 +196,7 @@
             </div>
           </div>
           <figure class="family-photo">
-            <img src="assets/images/family-sq.webp" alt="Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="assets/images/family-sq.webp" alt="Familia productora Monte Viejo en cafetal de Rodríguez de Mendoza" width="800" height="800" loading="lazy" decoding="async">
             <figcaption class="quote">Café de altura, tradición familiar y dedicación por la calidad.</figcaption>
           </figure>
         </div>
@@ -255,7 +257,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="footer-brand" href="#inicio"><img class="footer-logo" src="assets/images/logo-black-main.png" alt="Monte Viejo" width="1599" height="1591" loading="lazy" decoding="async"></a>
+        <a class="footer-brand" href="#inicio"><img class="footer-logo" src="assets/images/logo-black-main.png" alt="Monte Viejo" width="256" height="255" loading="lazy" decoding="async"></a>
         <p class="footer-origin">Familia cafetera · Rodríguez de Mendoza, Amazonas</p>
         <nav class="footer-links" aria-label="Pie de página"><a href="#cafes">Nuestros cafés</a><a href="#familia">Familia</a><a href="#origen">Origen</a><a href="#contacto">Contacto</a></nav>
         <p class="copyright">2026 Monte Viejo. Café de especialidad desde Rodríguez de Mendoza, Amazonas.</p>

@@ -68,9 +68,9 @@ Opciones incluidas:
 - Usar `.jpg`, `.png` o `.webp`.
 - Usar nombres en minúsculas.
 - Usar guiones en vez de espacios.
-- Mantener imágenes debajo de 500 KB cuando sea posible.
-- Imágenes de productos deben usar formato horizontal 16:9, idealmente 1600 × 900 px.
-- Imagen familiar funciona mejor en formato cuadrado.
+- Mantener imágenes debajo de 200 KB cuando sea posible.
+- Imágenes de productos deben usar formato horizontal 16:9, idealmente 1200 × 675 px.
+- Imagen familiar funciona mejor en formato cuadrado, idealmente 800 × 800 px.
 
 ## No editar
 

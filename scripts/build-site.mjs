@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
@@ -24,7 +24,9 @@ const required = {
   logo: site?.logo,
   whatsappPhone: site?.whatsappPhone,
   socialImage: site?.socialImage,
-  socialImageAlt: site?.socialImageAlt
+  socialImageAlt: site?.socialImageAlt,
+  heroBrand: content.hero?.title,
+  heroTitle: content.hero?.text
 };
 
 for (const [name, value] of Object.entries(required)) {
@@ -119,6 +121,8 @@ if (!marker.test(html)) {
 html = html
   .replace(marker, seo)
   .replace(/<html lang="[^"]+">/, `<html lang="${escapeHtml(site.language)}">`)
+  .replace(/(<p class="hero-brand">)[\s\S]*?(<\/p>)/, `$1${escapeHtml(content.hero.title)}$2`)
+  .replace(/(<h1 class="hero-copy" id="hero-title">)[\s\S]*?(<\/h1>)/, `$1${escapeHtml(content.hero.text)}$2`)
   .replace(/phone=\d+/g, `phone=${site.whatsappPhone}`);
 
 rmSync(output, { recursive: true, force: true });
@@ -133,9 +137,30 @@ writeFileSync(resolve(output, "index.html"), html);
 const renderedJson = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 const organization = renderedJson["@graph"].find((entry) => entry["@type"] === "Organization");
 const phones = [...html.matchAll(/phone=(\d+)/g)].map((match) => match[1]);
+const localAssets = [...html.matchAll(/(?:href|src)="(assets\/[^"?]+)(?:\?[^"#]*)?"/g)].map((match) => match[1]);
+const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
+const missingAnchors = [...html.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]).filter((id) => !ids.has(id));
 
 if (organization?.telephone !== `+${site.whatsappPhone}` || phones.some((phone) => phone !== site.whatsappPhone)) {
   throw new Error("Generated SEO or WhatsApp phone does not match content.js");
+}
+
+if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes(escapeHtml(content.hero.text))) {
+  throw new Error("Generated page must contain one content-driven H1");
+}
+
+if (localAssets.some((asset) => !existsSync(resolve(root, asset)))) {
+  throw new Error("Generated page references a missing local asset");
+}
+
+if (missingAnchors.length) {
+  throw new Error(`Generated page references missing anchors: ${missingAnchors.join(", ")}`);
+}
+
+const robots = readFileSync(resolve(root, "robots.txt"), "utf8");
+const sitemap = readFileSync(resolve(root, "sitemap.xml"), "utf8");
+if (!robots.includes(`${canonicalUrl}sitemap.xml`) || !sitemap.includes(`<loc>${canonicalUrl}</loc>`)) {
+  throw new Error("robots.txt or sitemap.xml does not match the canonical URL");
 }
 
 console.log(`Built ${output} with SEO metadata from content.js`);

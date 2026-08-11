@@ -3,8 +3,10 @@ name: "Monte Viejo"
 description: "Cereza total: an everyday family-farm coffee system built from saturated cherry red, warm white, and soft photographic windows."
 colors:
   cherry: "#c8102e"
+  cherry-bright: "#d81736"
   cherry-deep: "#970820"
   cherry-soft: "#f8dfe4"
+  leaf-soft: "#dce9df"
   paper: "#fffdf9"
   white: "#ffffff"
   ink: "#1d1514"
@@ -14,6 +16,18 @@ typography:
   display:
     fontFamily: "Sarina, Segoe Script, cursive"
     fontSize: "clamp(4.7rem, 8vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
+  display-tablet:
+    fontFamily: "Sarina, Segoe Script, cursive"
+    fontSize: "clamp(4.2rem, 17vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
+  display-mobile:
+    fontFamily: "Sarina, Segoe Script, cursive"
+    fontSize: "clamp(3.7rem, 18vw, 5.1rem)"
     fontWeight: 400
     lineHeight: 0.92
     letterSpacing: "-0.035em"

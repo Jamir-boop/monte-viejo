@@ -76,9 +76,8 @@
       return rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
     };
 
-    setNavCtaHidden(isHeroCtaVisible());
-
     if ("IntersectionObserver" in window) {
+      setNavCtaHidden(true);
       const observer = new IntersectionObserver((entries) => {
         setNavCtaHidden(entries.some((entry) => entry.isIntersecting));
       });
@@ -88,6 +87,7 @@
     }
 
     const update = () => setNavCtaHidden(isHeroCtaVisible());
+    update();
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
   };
@@ -237,8 +237,6 @@
       card.href = whatsappUrl(product.whatsappText);
       card.target = "_blank";
       card.rel = "noopener";
-      card.setAttribute("aria-label", `${product.cta} sobre ${product.title}`);
-
       if (product.badge) {
         card.appendChild(createElement("span", "badge", product.badge));
       }
@@ -246,8 +244,8 @@
       const img = createElement("img");
       img.src = product.image || "";
       img.alt = product.imageAlt || product.title || "";
-      img.width = 1600;
-      img.height = 900;
+      img.width = 1200;
+      img.height = 675;
       img.loading = "lazy";
       img.decoding = "async";
       card.appendChild(img);
@@ -315,8 +313,8 @@
 
   image(".hero-bag", hero.bagImage || hero.beanImage, hero.bagAlt || hero.beanAlt);
   image(".hero-landscape-image", hero.backgroundImage, hero.backgroundAlt);
-  text("#hero-title", hero.title);
-  text(".hero-copy", hero.text);
+  text(".hero-brand", hero.title);
+  text("#hero-title", hero.text);
   setLink(".hero .button", hero.buttonText, whatsappUrl(hero.whatsappText));
   setLink(".nav-cta", null, whatsappUrl(hero.whatsappText));
   syncExclusiveCtas();
