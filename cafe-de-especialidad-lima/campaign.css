@@ -253,7 +253,7 @@ a {
   z-index: 2;
   right: clamp(32px, 8vw, 108px);
   bottom: 22px;
-  width: clamp(300px, 34vw, 430px);
+  width: clamp(340px, 40vw, 500px);
   margin: 0;
   text-align: center;
   animation: product-arrival 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -755,9 +755,9 @@ footer a {
   }
 
   .hero-product {
-    right: -2vw;
+    right: -8vw;
     bottom: 22px;
-    width: min(54vw, 380px);
+    width: min(68vw, 420px);
   }
 
   .hero-product img {
@@ -854,8 +854,8 @@ footer a {
   }
 
   .hero-product {
-    right: -7vw;
-    width: 54vw;
+    right: -12vw;
+    width: 70vw;
   }
 
   .order-section {
@@ -938,7 +938,7 @@ footer a {
   }
 
   .hero-product {
-    width: 55vw;
+    width: 72vw;
   }
 }
 

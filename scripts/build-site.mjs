@@ -63,8 +63,9 @@ if (!Array.isArray(campaign.sizes) || campaign.sizes.length !== 2 || campaign.si
 }
 
 const priceOf = (size) => Number(campaign.sizes.find((item) => item.value === size)?.price.replace(/[^\d.]/g, ""));
-if (priceOf("500 g") * 2 - priceOf("1 kg") !== 20 || !campaign.saving.includes("S/20")) {
-  throw new Error("Campaign prices and the advertised S/20 saving do not match");
+const campaignSaving = priceOf("500 g") * 2 - priceOf("1 kg");
+if (campaignSaving <= 0 || campaign.saving !== `Ahorras S/${campaignSaving}`) {
+  throw new Error("Campaign prices and the advertised saving do not match");
 }
 
 const canonicalUrl = new URL(site.canonicalUrl).href;
@@ -233,6 +234,7 @@ const localAssets = [...html.matchAll(/(?:href|src)="(assets\/[^"?]+)(?:\?[^"#]*
 const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
 const missingAnchors = [...html.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]).filter((id) => !ids.has(id));
 const campaignAssets = [...campaignHtml.matchAll(/(?:href|src)="\.\.\/(assets\/[^"?]+)(?:\?[^"#]*)?"/g)].map((match) => match[1]);
+const campaignDistricts = [...campaignHtml.matchAll(/<option value="([^"]+)"><\/option>/g)].map((match) => match[1]);
 
 if (organization?.telephone !== `+${site.whatsappPhone}` || phones.some((phone) => phone !== site.whatsappPhone)) {
   throw new Error("Generated SEO or WhatsApp phone does not match content.js");
@@ -268,6 +270,10 @@ if (campaignAssets.some((asset) => !existsSync(resolve(root, asset)))) {
 
 if ((campaignHtml.match(/<h1\b/g) || []).length !== 1 || !campaignHtml.includes(escapeHtml(campaign.offer))) {
   throw new Error("Generated campaign page must contain one H1 and the content-driven offer");
+}
+
+if (campaignDistricts.length !== 43 || new Set(campaignDistricts).size !== 43) {
+  throw new Error("Campaign district list must contain the 43 unique districts of Lima");
 }
 
 const robots = readFileSync(resolve(root, "robots.txt"), "utf8");

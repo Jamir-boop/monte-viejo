@@ -86,6 +86,8 @@
   const districtError = document.querySelector("#district-error");
   const submit = document.querySelector(".order-submit");
   const stickySubmit = document.querySelector(".sticky-submit");
+  const districtOptions = Array.from(document.querySelectorAll("#lima-districts option"), (option) => option.value);
+  const normalizeDistrict = (value) => value.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   if (stickySubmit && "IntersectionObserver" in window) {
     const visibleActions = new Set();
@@ -104,9 +106,13 @@
   }
 
   const validateDistrict = () => {
-    const valid = district.value.trim().length >= 2;
+    const selection = districtOptions.find((option) => normalizeDistrict(option) === normalizeDistrict(district.value));
+    const valid = Boolean(selection);
     district.setAttribute("aria-invalid", String(!valid));
     districtError.hidden = valid;
+    if (selection) {
+      district.value = selection;
+    }
     return valid;
   };
 
