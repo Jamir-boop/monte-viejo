@@ -181,7 +181,7 @@ window.siteContent = {
     familyImage: "assets/images/family.png",
     familyImageAlt: "Familia productora Monte Viejo en el cafetal",
     payments: "Yape · Plin · Transferencia",
-    delivery: "Envío adicional según distrito",
+    delivery: "Envío adicional según distrito · Envío gratis por compras mayores a S/200",
     promotion: "Válido hasta el 30 de septiembre de 2026 o hasta agotar 100 unidades.",
     finalTitle: "Tu café de Amazonas está a un mensaje",
     finalButton: "Armar mi pedido",

@@ -1,0 +1,8 @@
+Use case: ui-mockup
+Asset type: final high-fidelity mobile-first landing-page preview, portrait 1080x1920
+Primary request: Combine Option 1's bag-led red hero with Option 2's clean product selection and proof system. Preserve this sequence: offer, size, preparation, district, WhatsApp, origin, family, payments, promotion, final WhatsApp CTA.
+First viewport: real coffee bag at large scale on the right crossing from cherry red into warm white. Exact copy “1 kg por S/80”, “Ahorras S/20”, and “Pedir por WhatsApp”.
+Order area: “1. Elige tu tamaño” with “500 g · S/50” and featured “1 kg · S/80”; “2. Elige cómo lo quieres” with “En grano” and “Molido”; “3. Indica tu distrito” with example “Miraflores”; dominant “Continuar por WhatsApp”.
+Proof: real Amazonas landscape, “Rodríguez de Mendoza”, “+1600 m s. n. m.”, “Proceso lavado”, “83 SCA”; real family image; “Yape · Plin · Transferencia”; “Envío adicional según distrito”; “Válido hasta el 30 de septiembre de 2026 o hasta agotar 100 unidades”.
+Style: Monte Viejo Cereza total. Cherry #c8102e, deep cherry #970820, warm paper #fffdf9, white, ink #1d1514. Rounded bold sans, flat tonal fields, organic photographic windows, tactile red pill controls, selective product shadow.
+Constraints: mobile webpage, not a poster; use real supplied imagery and exact copy; no S/130, free shipping, countdown, invented delivery time, testimonials, certifications, green CTA, cart, checkout, dark luxury, glassmorphism, excessive cards, or watermark.

@@ -14,6 +14,7 @@ Oferta principal:
 - Café en grano o molido.
 - Pago por Yape, Plin o transferencia.
 - Envío adicional según distrito.
+- Envío gratis por compras mayores a S/200.
 
 ## Presupuesto
 
