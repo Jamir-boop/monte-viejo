@@ -142,6 +142,52 @@ window.siteContent = {
     ]
   },
 
+  campaign: {
+    title: "Café de especialidad en Lima: 1 kg por S/80 | Monte Viejo",
+    description: "Café de especialidad de Amazonas en Lima. Elige café en grano o molido: 500 g por S/50 o 1 kg por S/80 y pide por WhatsApp.",
+    canonicalUrl: "https://monteviejo.org/cafe-de-especialidad-lima/",
+    socialImage: "assets/images/share-monte-viejo-graphic.jpg",
+    socialImageAlt: "Café Monte Viejo de Rodríguez de Mendoza, Amazonas",
+    headline: "Café de especialidad de Amazonas en Lima",
+    offer: "1 kg por S/80",
+    offerSize: "1 kg",
+    offerAmount: "S/80",
+    saving: "Ahorras S/20",
+    heroButton: "Armar mi pedido",
+    productImage: "assets/images/bolsa-monte-viejo-frente-cutout-v2.png",
+    productImageAlt: "Bolsa Monte Viejo de 500 g, imagen referencial del café de la campaña",
+    productImageNote: "Presentación fotografiada: 500 g",
+    sizes: [
+      { value: "500 g", price: "S/50" },
+      { value: "1 kg", price: "S/80", featured: true }
+    ],
+    preparations: ["En grano", "Molido"],
+    districtLabel: "3. Indica tu distrito",
+    districtPlaceholder: "Ej. Miraflores",
+    submitButton: "Continuar por WhatsApp",
+    districtError: "Escribe tu distrito para calcular el envío.",
+    originTitle: "De Rodríguez de Mendoza a Lima",
+    originText: "Café 100% arábica cultivado por nuestra familia en Rodríguez de Mendoza, Amazonas.",
+    originImage: "assets/images/hero-amazonas.webp",
+    originImageAlt: "Cafetales entre montañas y neblina en Rodríguez de Mendoza, Amazonas",
+    facts: [
+      { label: "Origen", value: "Rodríguez de Mendoza" },
+      { label: "Altitud", value: "+1600 m s. n. m." },
+      { label: "Proceso", value: "Lavado" },
+      { label: "Puntaje estimado", value: "83 SCA" }
+    ],
+    familyTitle: "Dos generaciones detrás de cada bolsa",
+    familyText: "Cultivamos y cuidamos cada lote en familia, desde Amazonas hasta tu pedido.",
+    familyImage: "assets/images/family.png",
+    familyImageAlt: "Familia productora Monte Viejo en el cafetal",
+    payments: "Yape · Plin · Transferencia",
+    delivery: "Envío adicional según distrito",
+    promotion: "Válido hasta el 30 de septiembre de 2026 o hasta agotar 100 unidades.",
+    finalTitle: "Tu café de Amazonas está a un mensaje",
+    finalButton: "Armar mi pedido",
+    whatsappIntro: "Hola, vengo de la campaña de Lima y quiero pedir café Monte Viejo."
+  },
+
   contact: {
     title: "Cuéntanos qué café necesitas",
     text: "Escríbenos para pedir café tostado en grano o molido. Si compras para un negocio, también atendemos café verde y pedidos por mayor.",

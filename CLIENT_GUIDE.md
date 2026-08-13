@@ -27,6 +27,26 @@ Puede cambiar a:
 title: "Monte Viejo Café",
 ```
 
+## Editar la campaña de Lima
+
+La página de campaña está en:
+
+```text
+https://monteviejo.org/cafe-de-especialidad-lima/
+```
+
+Edite el bloque `campaign` de `content.js` para cambiar:
+
+- precios y ahorro;
+- fecha o cantidad límite;
+- métodos de pago;
+- textos de entrega;
+- imágenes de producto, origen y familia.
+
+Cuando tenga una fotografía real de la bolsa de 1 kg, suba el archivo a `assets/images/` y cambie `campaign.productImage`, `campaign.productImageAlt` y `campaign.productImageNote`.
+
+No anuncie un precio anterior que no haya sido el precio ordinario real.
+
 ## Cambiar imagen
 
 1. Abrir `assets/images/`.

@@ -12,6 +12,7 @@ vm.runInNewContext(contentSource, sandbox, { filename: "content.js" });
 
 const content = sandbox.window.siteContent;
 const site = content?.site;
+const campaign = content?.campaign;
 
 const required = {
   title: site?.title,
@@ -40,6 +41,30 @@ for (const [name, value] of Object.entries(required)) {
 
 if (!/^\d{8,15}$/.test(site.whatsappPhone)) {
   throw new Error("site.whatsappPhone must contain 8 to 15 digits");
+}
+
+for (const [name, value] of Object.entries({
+  campaignTitle: campaign?.title,
+  campaignDescription: campaign?.description,
+  campaignCanonicalUrl: campaign?.canonicalUrl,
+  campaignOffer: campaign?.offer,
+  campaignSaving: campaign?.saving,
+  campaignPromotion: campaign?.promotion,
+  campaignSocialImage: campaign?.socialImage,
+  campaignSocialImageAlt: campaign?.socialImageAlt
+})) {
+  if (typeof value !== "string" || !value.trim()) {
+    throw new Error(`Missing content value: ${name}`);
+  }
+}
+
+if (!Array.isArray(campaign.sizes) || campaign.sizes.length !== 2 || campaign.sizes.some((size) => !size.value || !size.price)) {
+  throw new Error("content.campaign.sizes must contain two complete options");
+}
+
+const priceOf = (size) => Number(campaign.sizes.find((item) => item.value === size)?.price.replace(/[^\d.]/g, ""));
+if (priceOf("500 g") * 2 - priceOf("1 kg") !== 20 || !campaign.saving.includes("S/20")) {
+  throw new Error("Campaign prices and the advertised S/20 saving do not match");
 }
 
 const canonicalUrl = new URL(site.canonicalUrl).href;
@@ -114,6 +139,62 @@ ${jsonLd.split("\n").map((line) => `      ${line}`).join("\n")}
     </script>
     <!-- seo:generated:end -->`;
 
+const campaignUrl = new URL(campaign.canonicalUrl).href;
+const campaignStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${campaignUrl}#webpage`,
+      url: campaignUrl,
+      name: campaign.title,
+      description: campaign.description,
+      inLanguage: site.language,
+      isPartOf: { "@id": `${canonicalUrl}#website` },
+      about: { "@id": `${campaignUrl}#product` }
+    },
+    {
+      "@type": "Product",
+      "@id": `${campaignUrl}#product`,
+      name: "Café tostado Monte Viejo",
+      description: campaign.description,
+      image: absoluteUrl(campaign.socialImage),
+      brand: { "@type": "Brand", name: site.brandName },
+      offers: campaign.sizes.map((size) => ({
+        "@type": "Offer",
+        name: size.value,
+        price: size.price.replace(/[^\d.]/g, ""),
+        priceCurrency: "PEN",
+        availability: "https://schema.org/InStock",
+        url: campaignUrl,
+        priceValidUntil: "2026-09-30"
+      }))
+    }
+  ]
+};
+const campaignJsonLd = JSON.stringify(campaignStructuredData, null, 2).replaceAll("<", "\\u003c");
+const campaignSeo = `<!-- campaign-seo:generated:start -->
+    <meta name="description" content="${escapeHtml(campaign.description)}">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <title>${escapeHtml(campaign.title)}</title>
+    <link rel="canonical" href="${escapeHtml(campaignUrl)}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="${escapeHtml(site.locale)}">
+    <meta property="og:site_name" content="${escapeHtml(site.brandName)}">
+    <meta property="og:title" content="${escapeHtml(campaign.title)}">
+    <meta property="og:description" content="${escapeHtml(campaign.description)}">
+    <meta property="og:url" content="${escapeHtml(campaignUrl)}">
+    <meta property="og:image" content="${escapeHtml(absoluteUrl(campaign.socialImage))}">
+    <meta property="og:image:alt" content="${escapeHtml(campaign.socialImageAlt)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeHtml(campaign.title)}">
+    <meta name="twitter:description" content="${escapeHtml(campaign.description)}">
+    <meta name="twitter:image" content="${escapeHtml(absoluteUrl(campaign.socialImage))}">
+    <script type="application/ld+json">
+${campaignJsonLd.split("\n").map((line) => `      ${line}`).join("\n")}
+    </script>
+    <!-- campaign-seo:generated:end -->`;
+
 let html = readFileSync(resolve(root, "index.html"), "utf8");
 const marker = /<!-- seo:generated:start -->[\s\S]*?<!-- seo:generated:end -->/;
 
@@ -128,14 +209,22 @@ html = html
   .replace(/(<h1 class="hero-copy" id="hero-title">)[\s\S]*?(<\/h1>)/, `$1${escapeHtml(content.hero.text)}$2`)
   .replace(/phone=\d+/g, `phone=${site.whatsappPhone}`);
 
+let campaignHtml = readFileSync(resolve(root, "cafe-de-especialidad-lima/index.html"), "utf8");
+const campaignMarker = /<!-- campaign-seo:generated:start -->[\s\S]*?<!-- campaign-seo:generated:end -->/;
+if (!campaignMarker.test(campaignHtml)) {
+  throw new Error("Campaign SEO generation markers are missing");
+}
+campaignHtml = campaignHtml.replace(campaignMarker, campaignSeo);
+
 rmSync(output, { recursive: true, force: true });
 mkdirSync(output, { recursive: true });
 
-for (const entry of ["assets", "CNAME", "content.js", "robots.txt", "sitemap.xml"]) {
+for (const entry of ["assets", "cafe-de-especialidad-lima", "CNAME", "content.js", "robots.txt", "sitemap.xml"]) {
   cpSync(resolve(root, entry), resolve(output, entry), { recursive: true });
 }
 
 writeFileSync(resolve(output, "index.html"), html);
+writeFileSync(resolve(output, "cafe-de-especialidad-lima/index.html"), campaignHtml);
 
 const renderedJson = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 const organization = renderedJson["@graph"].find((entry) => entry["@type"] === "Organization");
@@ -143,6 +232,7 @@ const phones = [...html.matchAll(/phone=(\d+)/g)].map((match) => match[1]);
 const localAssets = [...html.matchAll(/(?:href|src)="(assets\/[^"?]+)(?:\?[^"#]*)?"/g)].map((match) => match[1]);
 const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));
 const missingAnchors = [...html.matchAll(/href="#([^"]+)"/g)].map((match) => match[1]).filter((id) => !ids.has(id));
+const campaignAssets = [...campaignHtml.matchAll(/(?:href|src)="\.\.\/(assets\/[^"?]+)(?:\?[^"#]*)?"/g)].map((match) => match[1]);
 
 if (organization?.telephone !== `+${site.whatsappPhone}` || phones.some((phone) => phone !== site.whatsappPhone)) {
   throw new Error("Generated SEO or WhatsApp phone does not match content.js");
@@ -172,10 +262,18 @@ if (missingAnchors.length) {
   throw new Error(`Generated page references missing anchors: ${missingAnchors.join(", ")}`);
 }
 
+if (campaignAssets.some((asset) => !existsSync(resolve(root, asset)))) {
+  throw new Error("Generated campaign page references a missing local asset");
+}
+
+if ((campaignHtml.match(/<h1\b/g) || []).length !== 1 || !campaignHtml.includes(escapeHtml(campaign.offer))) {
+  throw new Error("Generated campaign page must contain one H1 and the content-driven offer");
+}
+
 const robots = readFileSync(resolve(root, "robots.txt"), "utf8");
 const sitemap = readFileSync(resolve(root, "sitemap.xml"), "utf8");
-if (!robots.includes(`${canonicalUrl}sitemap.xml`) || !sitemap.includes(`<loc>${canonicalUrl}</loc>`)) {
+if (!robots.includes(`${canonicalUrl}sitemap.xml`) || !sitemap.includes(`<loc>${canonicalUrl}</loc>`) || !sitemap.includes(`<loc>${campaignUrl}</loc>`)) {
   throw new Error("robots.txt or sitemap.xml does not match the canonical URL");
 }
 
-console.log(`Built ${output} with SEO metadata from content.js`);
+console.log(`Built ${output} with homepage and campaign SEO metadata from content.js`);
