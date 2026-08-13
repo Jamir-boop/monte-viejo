@@ -27,8 +27,8 @@ window.siteContent = {
     text: "Café de especialidad de Rodríguez de Mendoza, Amazonas, para todos los días.",
     buttonText: "Pedir por WhatsApp",
     whatsappText: "Hola, quiero pedir café Monte Viejo.",
-    bagImage: "assets/images/bolsa-monte-viejo-frente.webp",
-    bagAlt: "Bolsa de café Monte Viejo de 500 g",
+    bagImage: "assets/images/bolsa-monte-viejo-hero-angulo.webp",
+    bagAlt: "Bolsa de café Monte Viejo de 500 g vista en ángulo",
     backgroundImage: "assets/images/hero-amazonas.webp",
     backgroundAlt: "Cafetales entre montañas y neblina en Rodríguez de Mendoza, Amazonas"
   },

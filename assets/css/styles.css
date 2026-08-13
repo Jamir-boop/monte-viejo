@@ -323,8 +323,9 @@ h3 {
   bottom: -10px;
   width: auto;
   height: min(94%, 570px);
-  clip-path: polygon(9% 2%, 88% 2%, 92% 97%, 6% 97%);
-  filter: drop-shadow(0 28px 24px rgba(44, 11, 5, 0.28));
+  filter:
+    drop-shadow(4px 1px 5px rgba(255, 253, 249, 0.62))
+    drop-shadow(0 28px 24px rgba(44, 11, 5, 0.28));
 }
 
 .hero-bloom {
