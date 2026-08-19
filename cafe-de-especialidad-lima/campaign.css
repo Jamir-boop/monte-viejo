@@ -298,7 +298,7 @@ a {
 .proof-shell,
 .family-shell,
 .details-shell {
-  width: min(100%, var(--container));
+  width: min(100%, 920px);
   margin: 0 auto;
 }
 
@@ -320,10 +320,6 @@ a {
   font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-.order-form {
-  max-width: 920px;
-}
-
 .choice-group {
   margin: 0;
   padding: 0;
@@ -331,11 +327,13 @@ a {
 }
 
 .choice-group + .choice-group,
+.quantity-field,
 .district-field {
   margin-top: 42px;
 }
 
 .choice-group legend,
+.quantity-field > label,
 .district-field > label {
   display: block;
   margin-bottom: 16px;
@@ -587,13 +585,105 @@ a {
   line-height: 1.25;
 }
 
-.family-proof {
-  padding: 0 var(--gutter) var(--section);
+.quantity-row {
+  display: flex;
+  width: min(100%, 430px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.quantity-stepper {
+  display: grid;
+  grid-template-columns: 58px 70px 58px;
+  min-height: 62px;
+  overflow: hidden;
+  border: 1px solid #bca39f;
+  border-radius: 14px;
   background: var(--white);
 }
 
-.family-shell {
-  max-width: 920px;
+.quantity-button,
+.quantity-stepper input {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+}
+
+.quantity-button {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 160ms ease-out, color 160ms ease-out;
+}
+
+.quantity-button:hover {
+  background: var(--cherry-soft);
+  color: var(--cherry-deep);
+}
+
+.quantity-button:focus-visible,
+.quantity-stepper input:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid var(--focus);
+  outline-offset: -3px;
+}
+
+.quantity-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.quantity-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.quantity-stepper input {
+  width: 70px;
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  appearance: textfield;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.quantity-stepper input::-webkit-inner-spin-button,
+.quantity-stepper input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.order-total {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+}
+
+.order-total span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.order-total strong {
+  color: var(--cherry);
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  letter-spacing: -0.035em;
+}
+
+.family-proof {
+  padding: 0 var(--gutter) var(--section);
+  background: var(--white);
 }
 
 .family-image {
@@ -863,6 +953,7 @@ footer a {
   }
 
   .choice-group + .choice-group,
+  .quantity-field,
   .district-field {
     margin-top: 34px;
   }

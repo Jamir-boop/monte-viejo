@@ -35,7 +35,7 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Sarina&amp;display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="campaign.css?v=20260812-4">
+    <link rel="stylesheet" href="campaign.css?v=20260818-1">
   </head>
   <body>
     <!--
@@ -117,8 +117,27 @@
               </div>
             </fieldset>
 
+            <div class="quantity-field">
+              <label id="quantity-label" for="quantity">3. ¿Cuántas unidades quieres?</label>
+              <div class="quantity-row">
+                <div class="quantity-stepper" role="group" aria-labelledby="quantity-label">
+                  <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Quitar una unidad">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12"></path></svg>
+                  </button>
+                  <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" inputmode="numeric">
+                  <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Agregar una unidad">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"></path></svg>
+                  </button>
+                </div>
+                <p class="order-total" aria-live="polite">
+                  <span>Total</span>
+                  <strong id="order-total">S/85</strong>
+                </p>
+              </div>
+            </div>
+
             <div class="district-field">
-              <label for="district" data-campaign="districtLabel">3. Indica tu distrito</label>
+              <label for="district" data-campaign="districtLabel">4. Indica tu distrito</label>
               <div class="input-wrap">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg>
                 <input id="district" name="district" type="text" list="lima-districts" autocomplete="address-level2" placeholder="Busca tu distrito" data-campaign-placeholder="districtPlaceholder" aria-describedby="district-help district-error" maxlength="32" required>
@@ -236,7 +255,7 @@
       <span>Rodríguez de Mendoza, Amazonas · 2026</span>
     </footer>
 
-    <script src="../content.js?v=20260812-5" defer></script>
-    <script src="campaign.js?v=20260812-4" defer></script>
+    <script src="../content.js?v=20260818-1" defer></script>
+    <script src="campaign.js?v=20260818-1" defer></script>
   </body>
 </html>

@@ -86,8 +86,35 @@
   const districtError = document.querySelector("#district-error");
   const submit = document.querySelector(".order-submit");
   const stickySubmit = document.querySelector(".sticky-submit");
+  const quantityInput = document.querySelector("#quantity");
+  const quantityButtons = Array.from(document.querySelectorAll("[data-quantity-action]"));
+  const totalOutput = document.querySelector("#order-total");
   const districtOptions = Array.from(document.querySelectorAll("#lima-districts option"), (option) => option.value);
   const normalizeDistrict = (value) => value.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const readQuantity = () => Math.max(1, Math.trunc(Number(quantityInput.value) || 1));
+  const readPrice = (size) => Number((size.dataset.price.match(/\d+/g) || []).join(""));
+  const orderTotal = (size, quantity) => readPrice(size) * quantity;
+  const updateOrderTotal = () => {
+    const size = form.querySelector('input[name="size"]:checked');
+    const quantity = readQuantity();
+    totalOutput.textContent = `S/${orderTotal(size, quantity).toLocaleString("es-PE")}`;
+    quantityButtons[0].disabled = quantity === 1;
+  };
+
+  quantityButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const delta = button.dataset.quantityAction === "increase" ? 1 : -1;
+      quantityInput.value = Math.max(1, readQuantity() + delta);
+      updateOrderTotal();
+    });
+  });
+  quantityInput.addEventListener("input", updateOrderTotal);
+  quantityInput.addEventListener("change", () => {
+    quantityInput.value = readQuantity();
+    updateOrderTotal();
+  });
+  sizeInputs.forEach((input) => input.addEventListener("change", updateOrderTotal));
+  updateOrderTotal();
 
   if (stickySubmit && "IntersectionObserver" in window) {
     const visibleActions = new Set();
@@ -132,21 +159,27 @@
 
     const size = form.querySelector('input[name="size"]:checked');
     const preparation = form.querySelector('input[name="preparation"]:checked');
+    const quantity = readQuantity();
+    const total = orderTotal(size, quantity);
     const params = new URLSearchParams(window.location.search);
     const attribution = Object.fromEntries(Array.from(params).filter(([key]) => key.toLowerCase().startsWith("utm_")));
     const attributionText = Object.entries(attribution).map(([key, value]) => `${key}=${value}`).join(" · ");
     const message = [
       campaign.whatsappIntro,
       "",
-      `Pedido: ${size.value} (${size.dataset.price})`,
+      `Pedido: ${size.value}`,
+      `Cantidad: ${quantity}`,
       `Presentación: ${preparation.value}`,
       `Distrito: ${district.value.trim()}`,
+      `Total del café: S/${total.toLocaleString("es-PE")}`,
       campaign.delivery,
       attributionText ? `Referencia: ${attributionText}` : ""
     ].filter(Boolean).join("\n");
     const detail = {
       size: size.value,
       price: size.dataset.price,
+      quantity,
+      total,
       preparation: preparation.value,
       district: district.value.trim(),
       campaign: params.get("utm_campaign") || "lima_launch_2026",

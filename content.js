@@ -162,7 +162,7 @@ window.siteContent = {
       { value: "1 kg", price: "S/85", featured: true }
     ],
     preparations: ["En grano", "Molido"],
-    districtLabel: "3. Indica tu distrito",
+    districtLabel: "4. Indica tu distrito",
     districtPlaceholder: "Busca tu distrito",
     submitButton: "Continuar por WhatsApp",
     districtError: "Selecciona un distrito de Lima de la lista.",
