@@ -289,6 +289,7 @@
 
   const site = content.site || {};
   const hero = content.hero || {};
+  const campaign = content.campaign || {};
   const story = content.story || {};
   const catalog = content.catalog || {};
   const origin = catalog.origin || {};
@@ -318,6 +319,11 @@
   setLink(".hero .button", hero.buttonText, whatsappUrl(hero.whatsappText));
   setLink(".nav-cta", null, whatsappUrl(hero.whatsappText));
   syncExclusiveCtas();
+
+  text(".campaign-banner-offer", campaign.offer);
+  text(".campaign-banner-saving", campaign.saving);
+  text(".campaign-banner-cta span", campaign.heroButton);
+  text(".campaign-banner-terms", campaign.promotion);
 
   text("#familia h2", story.title);
   text("#familia .story-intro", story.intro);
