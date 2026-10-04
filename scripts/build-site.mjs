@@ -167,8 +167,7 @@ const campaignStructuredData = {
         price: size.price.replace(/[^\d.]/g, ""),
         priceCurrency: "PEN",
         availability: "https://schema.org/InStock",
-        url: campaignUrl,
-        priceValidUntil: "2026-09-30"
+        url: campaignUrl
       }))
     }
   ]

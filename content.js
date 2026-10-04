@@ -182,7 +182,7 @@ window.siteContent = {
     familyImageAlt: "Familia productora Monte Viejo en el cafetal",
     payments: "Yape · Plin · Transferencia",
     delivery: "Envío adicional según distrito · Envío gratis por compras mayores a S/200",
-    promotion: "Válido hasta el 30 de septiembre de 2026 o hasta agotar 100 unidades.",
+    promotion: "Válido hasta agotar 100 unidades.",
     finalTitle: "Tu café de Amazonas está a un mensaje",
     finalButton: "Armar mi pedido",
     whatsappIntro: "Hola, vengo de la campaña de Lima y quiero pedir café Monte Viejo."
