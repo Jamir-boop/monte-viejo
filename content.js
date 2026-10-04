@@ -1,7 +1,7 @@
 window.siteContent = {
   site: {
     title: "Café de especialidad de Amazonas | Monte Viejo",
-    description: "Café de especialidad de Rodríguez de Mendoza, Amazonas. Elige café tostado en grano o molido: 500 g por S/55 o 1 kg por S/85.",
+    description: "Café de especialidad de Rodríguez de Mendoza, Amazonas. Elige café tostado en grano o molido: 500 g por S/45 o 1 kg por S/85.",
     brandName: "Monte Viejo",
     canonicalUrl: "https://monteviejo.org/",
     language: "es-PE",
@@ -49,7 +49,7 @@ window.siteContent = {
   catalog: {
     eyebrow: "Café verde, tostado y molido",
     title: "Nuestros cafés",
-    intro: "Café tostado en grano o molido: 500 g por S/55 o 1 kg por S/85. También ofrecemos café verde y pedidos para negocios.",
+    intro: "Café tostado en grano o molido: 500 g por S/45 o 1 kg por S/85. También ofrecemos café verde y pedidos para negocios.",
     origin: {
       eyebrow: "De dónde viene",
       title: "Rodríguez de Mendoza, Amazonas",
@@ -70,7 +70,7 @@ window.siteContent = {
         imageAlt: "Bolsa Monte Viejo detrás de un recipiente con café tostado en grano",
         text: "Es un tueste balanceado para tomar todos los días o servir en cafetería. Tiene dulzor natural, buen aroma y una taza limpia.",
         specs: [
-          "500 g S/55 · 1 kg S/85",
+          "500 g S/45 · 1 kg S/85",
           "Notas de caramelo, cacao, panela y nuez",
           "Para espresso, moka, prensa y métodos filtrados"
         ],
@@ -84,7 +84,7 @@ window.siteContent = {
         text: "Lo tostamos, molemos y empacamos para conservar su aroma. Puedes elegir la molienda según cómo prepares tu café.",
         specs: [
           "Molienda fina, media o gruesa",
-          "500 g S/55 · 1 kg S/85",
+          "500 g S/45 · 1 kg S/85",
           "Para cafetera eléctrica, moka, prensa y métodos filtrados"
         ],
         cta: "Pedir por WhatsApp",
@@ -144,7 +144,7 @@ window.siteContent = {
 
   campaign: {
     title: "Café de especialidad en Lima: 1 kg por S/85 | Monte Viejo",
-    description: "Café de especialidad de Amazonas en Lima. Elige café en grano o molido: 500 g por S/55 o 1 kg por S/85 y pide por WhatsApp.",
+    description: "Café de especialidad de Amazonas en Lima. Elige café en grano o molido: 500 g por S/45 o 1 kg por S/85 y pide por WhatsApp.",
     canonicalUrl: "https://monteviejo.org/cafe-de-especialidad-lima/",
     socialImage: "assets/images/share-monte-viejo-graphic.jpg",
     socialImageAlt: "Café Monte Viejo de Rodríguez de Mendoza, Amazonas",
@@ -152,13 +152,13 @@ window.siteContent = {
     offer: "1 kg por S/85",
     offerSize: "1 kg",
     offerAmount: "S/85",
-    saving: "Ahorras S/25",
+    saving: "Ahorras S/5",
     heroButton: "Armar mi pedido",
     productImage: "assets/images/bolsa-monte-viejo-hero-angulo.webp",
     productImageAlt: "Bolsa Monte Viejo de 500 g vista en ángulo, imagen referencial de la campaña",
     productImageNote: "Presentación fotografiada: 500 g",
     sizes: [
-      { value: "500 g", price: "S/55" },
+      { value: "500 g", price: "S/45" },
       { value: "1 kg", price: "S/85", featured: true }
     ],
     preparations: ["En grano", "Molido"],

@@ -9,8 +9,8 @@ https://monteviejo.org/cafe-de-especialidad-lima/
 Oferta principal:
 
 - 1 kg por S/85.
-- Ahorro real de S/25 frente a dos bolsas de 500 g.
-- 500 g por S/55.
+- Ahorro real de S/5 frente a dos bolsas de 500 g.
+- 500 g por S/45.
 - Café en grano o molido.
 - Pago por Yape, Plin o transferencia.
 - Envío adicional según distrito.
@@ -51,7 +51,7 @@ Meta puede distribuir el gasto de forma irregular entre días. El límite import
 
 ## Anuncios para probar
 
-1. **Oferta:** 1 kg por S/85 y ahorro de S/25.
+1. **Oferta:** 1 kg por S/85 y ahorro de S/5.
 2. **Producto:** bolsa de café, café en grano o molido y pedido sencillo.
 3. **Origen:** familia productora y café de Rodríguez de Mendoza, Amazonas.
 
